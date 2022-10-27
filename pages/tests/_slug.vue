@@ -25,6 +25,16 @@
   
 <script>
 export default {
+  head: {
+    title: "IMDB - Prøver",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content: "Tests page2",
+      },
+    ],
+  },
   data() {
     return {
       currentTest: {},
