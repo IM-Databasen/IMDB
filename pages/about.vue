@@ -4,12 +4,11 @@
       <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
         <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
           <div class="md:5/12 lg:w-5/12">
-            <img src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png" alt="image" loading="lazy"
-              width="" height="">
+            <img src="../static/images/placeholder650_550.webp" alt="image" loading="lazy" width="" height="">
           </div>
           <div class="md:7/12 lg:w-6/12">
-            <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">Nuxt development is carried out by passionate
-              developers</h2>
+            <h1 class="text-2xl text-gray-900 font-bold md:text-4xl">Nuxt development is carried out by passionate
+              developers</h1>
             <p class="mt-6 text-gray-600">Yes. vetkje ka eg ska stappa her.</p>
             <p class="mt-4 text-gray-600"> Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita
               at? Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.</p>
@@ -17,7 +16,6 @@
         </div>
       </div>
     </div>
-
     <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0 bg-white">
       <div class="container xl:max-w-6xl mx-auto px-4">
         <!-- Heading start -->
@@ -32,7 +30,8 @@
             <line x1="45.1" y1="30.4" x2="0" y2="30.4" class="stroke-primary"
               style="stroke-width: 2;stroke-miterlimit: 10;"></line>
           </svg>
-          <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Gå aldri på en smell igjen med IMDB. Me vet svarene på Rune.</p>
+          <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Gå aldri på en smell igjen med IMDB.
+            Me vet svarene på Rune.</p>
         </header>
         <div class="flex flex-wrap flex-row -mx-4 text-center">
           <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s"
@@ -95,11 +94,10 @@
         </div>
       </div>
     </div>
-
     <div class="py-20 bg-gray-50">
       <div class="container mx-auto px-6 md:px-12 xl:px-32">
         <div class="mb-16 text-center">
-          <h2 class="mb-4 text-center text-2xl text-gray-900 font-bold md:text-4xl">IMDB</h2>
+          <h1 class="mb-4 text-center text-2xl text-gray-900 font-bold md:text-4xl">IMDB</h1>
           <p class="text-gray-600 lg:w-8/12 lg:mx-auto">Beskrivelse om ka IMDB e komme</p>
         </div>
         <div class="grid gap-12 items-center md:grid-cols-3">
@@ -108,7 +106,7 @@
               src="https://avatars.githubusercontent.com/u/89910775?v=4" alt="theo" loading="lazy" width="640"
               height="805">
             <div>
-              <h4 class="text-2xl">Theo</h4>
+              <h2 class="text-2xl">Theo</h2>
               <span class="block text-sm text-gray-500">Tittel</span>
             </div>
           </div>
@@ -117,7 +115,7 @@
               src="https://avatars.githubusercontent.com/u/89910638?v=4" alt="lartrags" loading="lazy" width="1000"
               height="667">
             <div>
-              <h4 class="text-2xl">Lars Erik</h4>
+              <h2 class="text-2xl">Lars Erik</h2>
               <span class="block text-sm text-gray-500">Tittel</span>
             </div>
           </div>
@@ -126,7 +124,7 @@
               src="https://avatars.githubusercontent.com/u/71834553?v=4" alt="arvid" loading="lazy" width="1000"
               height="667">
             <div>
-              <h4 class="text-2xl">Arvid</h4>
+              <h2 class="text-2xl">Arvid</h2>
               <span class="block text-sm text-gray-500">Tittel</span>
             </div>
           </div>
@@ -135,7 +133,7 @@
               src="https://avatars.githubusercontent.com/u/78083291?v=4" alt="erling" loading="lazy" width="1000"
               height="667">
             <div>
-              <h4 class="text-2xl">Erling</h4>
+              <h2 class="text-2xl">Erling</h2>
               <span class="block text-sm text-gray-500">Tittel</span>
             </div>
           </div>
