@@ -53,9 +53,6 @@
         ],
       }
     },
-    async asyncData({ params }: any) {
-      console.log(params)
-    },
     methods: {
       plusSlides(n: number) {
         this.SlideShow((this.slidePosition += n));
