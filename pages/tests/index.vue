@@ -2,15 +2,15 @@
   <div>
     <main>
       <div class="slideshow-container fade">
-          <div class="Containers" v-for="(item, index) in proover" :key="item.name + index">
-            <div class="MessageInfo">{{ index + 1 }} / {{ proover.length }}</div>
-            <img :src="item.image" :alt="item.name" style="width: 100%" />
-            <div class="Info">{{ item.name }}</div>
-          </div>
+        <div class="Containers" v-for="(item, index) in proover" :key="item.name + index">
+          <div class="MessageInfo">{{ index + 1 }} / {{ proover.length }}</div>
+          <img :src="item.image" :alt="item.name" style="width: 100%" />
+          <div class="Info">{{ item.name }}</div>
+        </div>
 
-          <!-- Back and forward buttons -->
-          <button class="Back" @click="plusSlides(-1)">&#10094;</button>
-          <button class="forward" @click="plusSlides(1)">&#10095;</button>
+        <!-- Back and forward buttons -->
+        <button class="Back" @click="plusSlides(-1)">&#10094;</button>
+        <button class="forward" @click="plusSlides(1)">&#10095;</button>
       </div>
       <br />
 

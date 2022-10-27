@@ -129,3 +129,36 @@
   from {opacity: .5}
   to {opacity: 2}
 }
+
+
+.test {
+  text-align: center;
+  background-color: #333333;
+  padding: 4rem;
+  color: #fff;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.collapsible {
+  text-align: center;;
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  color: #000;
+}
