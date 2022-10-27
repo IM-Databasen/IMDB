@@ -24,9 +24,9 @@
         test: {}
       }
     },
-    content: {
-      nestedProperties: ['author.name']
-    },
+    watch: {
+      '$route.query': '$fetch'
+    }, 
     async asyncData({ params }) {
       let proover = [
         {
@@ -73,7 +73,7 @@
       ]
       if (!params || params === '{}' || params.slug == '' || params.slug > proover.length) return
       return {
-        test: proover[params.slug]
+        test: proover[params.slug] ? proover[params.slug] : proover.find((test) => test.name.toLowerCase() === params.slug.toLowerCase())
       }
     },
     methods: {

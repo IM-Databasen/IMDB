@@ -5,7 +5,7 @@
         <div class="Containers" v-for="(item, index) in proover" :key="item.name + index">
           <div class="MessageInfo">{{ index + 1 }} / {{ proover.length }}</div>
           <img :src="item.image" :alt="item.name" style="width: 100%" />
-          <div class="Info">{{ item.name }}</div>
+          <nuxt-link class="Info" :to="'/tests/' + item.name">{{ item.name }}</nuxt-link>
         </div>
 
         <!-- Back and forward buttons -->
