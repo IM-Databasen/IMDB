@@ -40,17 +40,17 @@ export default {
       proover: [
         {
           name: "Nettverk",
-          image: "/images/img1.png",
+          image: "/images/img1.webp",
           description: "Her komme nettverkssvar",
         },
         {
           name: "Photoshop",
-          image: "/images/img2.png",
+          image: "/images/img2.webp",
           description: "mer info komme",
         },
         {
           name: "Oktettshit",
-          image: "/images/img3.png",
+          image: "/images/img3.webp",
           description: "mer info komme",
         },
       ],
