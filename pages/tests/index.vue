@@ -28,11 +28,10 @@
   </div>
 </template>
   
-  <script lang="ts">
+  <script>
   export default {
     data() {
       return {
-        test: 's',
         slidePosition: 1,
         proover: [
           {
@@ -54,18 +53,18 @@
       }
     },
     methods: {
-      plusSlides(n: number) {
+      plusSlides(n) {
         this.SlideShow((this.slidePosition += n));
       },
 
       //  images controls
-      currentSlide(n: number) {
+      currentSlide(n) {
         this.SlideShow((this.slidePosition = n));
       },
 
-      SlideShow(n: number) {
+      SlideShow(n) {
         var i;
-        var slides: any = document.getElementsByClassName("Containers");
+        var slides = document.getElementsByClassName("Containers");
         var circles = document.getElementsByClassName("dots");
         if (n > slides.length) {
           this.slidePosition = 1;
