@@ -5,7 +5,7 @@
       <div class="slideshow-container fade">
         <div class="Containers" v-for="(item, index) in proover" :key="item.id">
           <div class="MessageInfo">{{ index + 1 }} / {{ proover.length }}</div>
-          <img :src="item.image" style="width: 100%" />
+          <img :src="item.image" :alt="item.name" style="width: 100%" />
           <div class="Info">{{ item.name }}</div>
         </div>
 
