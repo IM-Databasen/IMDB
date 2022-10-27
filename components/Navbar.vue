@@ -1,12 +1,4 @@
 <template>
-  <!-- <nav class="nav">
-    <ul>
-      <li><div class="chrome shine" data-text="IMDB" data-testid="navbar-brand">IMDB</div></li>
-      <li><nuxt-link to="/">Him</nuxt-link></li>
-      <li><nuxt-link to="/about">Ka e IMDB?</nuxt-link></li>
-      <li><nuxt-link to="/tests">Prøver</nuxt-link></li>
-    </ul>
-  </nav> -->
   <nav class="bg-gray-800">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
@@ -46,9 +38,9 @@
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
-              <nuxt-link to="/" :class="$nuxt.$route.path === '/' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Him</nuxt-link>
-              <nuxt-link to="/about" :class="$nuxt.$route.path === '/about' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">Ka e IMDB?</nuxt-link>
-              <nuxt-link to="/tests" :class="$nuxt.$route.path === '/tests' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">Prøver</nuxt-link>
+              <nuxt-link to="/" :class="String($nuxt.$route.path) === '/' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Him</nuxt-link>
+              <nuxt-link to="/about" :class="String($nuxt.$route.path) == '/about' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">Ka e IMDB?</nuxt-link>
+              <nuxt-link to="/tests" :class="String($nuxt.$route.path).startsWith('/tests') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">Prøver</nuxt-link>
             </div>
           </div>
         </div>

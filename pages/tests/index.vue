@@ -1,34 +1,13 @@
 <template>
-  <div>
+  <div class="bg-gray-200 pt-3">
     <main>
-      <div class="slideshow-container fade">
-        <div
-          class="Containers"
-          v-for="(item, index) in proover"
-          :key="item.name + index"
-        >
-          <div class="MessageInfo">{{ index + 1 }} / {{ proover.length }}</div>
-          <img :src="item.image" :alt="item.name" style="width: 100%" />
-          <nuxt-link class="Info" :to="'/tests/' + item.name">{{
-            item.name
-          }}</nuxt-link>
-        </div>
-
-        <!-- Back and forward buttons -->
-        <button class="Back" @click="plusSlides(-1)">&#10094;</button>
-        <button class="forward" @click="plusSlides(1)">&#10095;</button>
-      </div>
-      <br />
-
-      <!-- The circles/dots -->
-      <div style="text-align: center">
-        <span
-          v-for="(item, index) in proover"
-          :key="index"
-          class="dots"
-          @click="currentSlide(index + 1)"
-        >
-        </span>
+      <div class="flex justify-between grid grid-cols-3 gap-6 m-10 mb-10">
+        <article v-for="(item, index) in proover" :key="item.name + index" class="container bg-white shadow-2xl rounded-2xl p-5">
+          <h1 class="font-bold text-yellow-500">{{ item.name }}</h1>
+          <p class="font-light text-gray-500 hover:font-bold">{{ item.description }}</p>
+          <h6 class="text-sm text-gray-300 mb-5">Publisert ein elle anna dato</h6>
+          <nuxt-link :to="'/tests/' + item.name" class="rounded-lg py-2 px-4 text-center text-white bg-yellow-400 hover:bg-yellow-500">Vis Prøve</nuxt-link>
+        </article>
       </div>
     </main>
   </div>
@@ -48,7 +27,6 @@ export default {
   },
   data() {
     return {
-      slidePosition: 1,
       proover: [
         {
           name: "Nettverk",
@@ -69,37 +47,9 @@ export default {
     };
   },
   methods: {
-    plusSlides(n) {
-      this.SlideShow((this.slidePosition += n));
-    },
-
-    //  images controls
-    currentSlide(n) {
-      this.SlideShow((this.slidePosition = n));
-    },
-
-    SlideShow(n) {
-      var i;
-      var slides = document.getElementsByClassName("Containers");
-      var circles = document.getElementsByClassName("dots");
-      if (n > slides.length) {
-        this.slidePosition = 1;
-      }
-      if (n < 1) {
-        this.slidePosition = slides.length;
-      }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < circles.length; i++) {
-        circles[i].className = circles[i].className.replace(" enable", "");
-      }
-      slides[this.slidePosition - 1].style.display = "block";
-      circles[this.slidePosition - 1].className += " enable";
-    },
+    
   },
   mounted() {
-    this.SlideShow(this.slidePosition);
   },
   computed: {},
 };
