@@ -34,13 +34,19 @@
         </div>
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex flex-shrink-0 items-center">
-            <div class="block h-8 w-auto chrome shine" data-text="IMDB" data-testid="navbar-brand">IMDB</div>
+            <img src="../static/favicon.png" class="w-10" />
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
-              <nuxt-link to="/" :class="String($nuxt.$route.path) === '/' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Him</nuxt-link>
-              <nuxt-link to="/about" :class="String($nuxt.$route.path) == '/about' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">Ka e IMDB?</nuxt-link>
-              <nuxt-link to="/tests" :class="String($nuxt.$route.path).startsWith('/tests') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">Prøver</nuxt-link>
+              <nuxt-link to="/"
+                :class="String($nuxt.$route.path) === '/' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'"
+                class="px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Him</nuxt-link>
+              <nuxt-link to="/about"
+                :class="String($nuxt.$route.path) == '/about' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'"
+                class="px-3 py-2 rounded-md text-sm font-medium">Ka e IMDB?</nuxt-link>
+              <nuxt-link to="/tests"
+                :class="String($nuxt.$route.path).startsWith('/tests') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'"
+                class="px-3 py-2 rounded-md text-sm font-medium">Prøver</nuxt-link>
             </div>
           </div>
         </div>
@@ -51,11 +57,17 @@
     <div class="sm:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pt-2 pb-3">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <nuxt-link to="/" :class="$nuxt.$route.path === '/' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Him</nuxt-link>
+        <nuxt-link to="/"
+          :class="$nuxt.$route.path === '/' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'"
+          class="block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Him</nuxt-link>
 
-        <nuxt-link to="/about" :class="$nuxt.$route.path === '/about' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class=" block px-3 py-2 rounded-md text-base font-medium">Ka e IMDB?</nuxt-link>
+        <nuxt-link to="/about"
+          :class="$nuxt.$route.path === '/about' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'"
+          class=" block px-3 py-2 rounded-md text-base font-medium">Ka e IMDB?</nuxt-link>
 
-        <nuxt-link to="/tests" :class="$nuxt.$route.path === '/tests' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="block px-3 py-2 rounded-md text-base font-medium">Prøver</nuxt-link>
+        <nuxt-link to="/tests"
+          :class="$nuxt.$route.path === '/tests' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'"
+          class="block px-3 py-2 rounded-md text-base font-medium">Prøver</nuxt-link>
       </div>
     </div>
   </nav>
@@ -64,7 +76,6 @@
 
 <script>
 import Vue from "vue";
-import Navbar from "~/components/Navbar.vue";
 export default Vue.extend({
   template: "navbar",
   transition: "slide-bottom",
@@ -76,7 +87,7 @@ export default Vue.extend({
   },
 
   methods: {},
-  async mounted() {},
+  async mounted() { },
   computed: {},
 });
 </script>
