@@ -10,8 +10,8 @@
         </div>
 
         <!-- Back and forward buttons -->
-        <a class="Back" @click="plusSlides(-1)">&#10094;</a>
-        <a class="forward" @click="plusSlides(1)">&#10095;</a>
+        <button class="Back" @click="plusSlides(-1)">&#10094;</button>
+        <button class="forward" @click="plusSlides(1)">&#10095;</button>
       </div>
       <br />
 
