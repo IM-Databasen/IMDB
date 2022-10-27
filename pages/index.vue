@@ -6,20 +6,24 @@
 
 <script>
 export default {
+  head: {
+    title: "IMDB - Homepage",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content: "Home page",
+      },
+    ],
+  },
   name: "Index",
   transition: "slide-bottom",
   components: {},
   data() {
-    return {
-    
-    }
+    return {};
   },
-  methods: {
-    
-  },
-  async mounted() {
-
-  },
+  methods: {},
+  async mounted() {},
   computed: {},
 };
 </script>
