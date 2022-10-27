@@ -42,16 +42,13 @@
         </div>
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex flex-shrink-0 items-center">
-            <img class="block h-8 w-auto lg:hidden"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
-            <img class="hidden h-8 w-auto lg:block"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+            <div class="block h-8 w-auto chrome shine" data-text="IMDB" data-testid="navbar-brand">IMDB</div>
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
-              <nuxt-link to="/" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Him</nuxt-link>
-              <nuxt-link to="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Ka e IMDB?</nuxt-link>
-              <nuxt-link to="/tests" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Prøver</nuxt-link>
+              <nuxt-link to="/" :class="$nuxt.$route.path === '/' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Him</nuxt-link>
+              <nuxt-link to="/about" :class="$nuxt.$route.path === '/about' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">Ka e IMDB?</nuxt-link>
+              <nuxt-link to="/tests" :class="$nuxt.$route.path === '/tests' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">Prøver</nuxt-link>
             </div>
           </div>
         </div>
@@ -62,12 +59,32 @@
     <div class="sm:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pt-2 pb-3">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <nuxt-link to="/" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Him</nuxt-link>
+        <nuxt-link to="/" :class="$nuxt.$route.path === '/' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Him</nuxt-link>
 
-        <nuxt-link to="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Ka e IMDB?</nuxt-link>
+        <nuxt-link to="/about" :class="$nuxt.$route.path === '/about' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class=" block px-3 py-2 rounded-md text-base font-medium">Ka e IMDB?</nuxt-link>
 
-        <nuxt-link to="/tests" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Prøver</nuxt-link>
+        <nuxt-link to="/tests" :class="$nuxt.$route.path === '/tests' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="block px-3 py-2 rounded-md text-base font-medium">Prøver</nuxt-link>
       </div>
     </div>
   </nav>
 </template>
+
+
+<script>
+import Vue from "vue";
+import Navbar from "~/components/Navbar.vue";
+export default Vue.extend({
+  template: "navbar",
+  transition: "slide-bottom",
+  async asyncData({ params, route }) {
+    return {
+      params: params,
+      route: route
+    }
+  },
+
+  methods: {},
+  async mounted() {},
+  computed: {},
+});
+</script>

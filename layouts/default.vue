@@ -14,7 +14,12 @@ export default Vue.extend({
   components: {
     Navbar,
   },
-  async asyncData() {},
+  async asyncData({ params, route }) {
+    return {
+      params: params,
+      route: route
+    }
+  },
 
   methods: {},
   async mounted() {},
