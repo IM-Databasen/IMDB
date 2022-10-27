@@ -106,33 +106,16 @@
   padding: 4rem;
   color: #fff;
   font-family:Arial, Helvetica, sans-serif;
-}
-
-.collapsible {
-  text-align: center;;
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-  color: #000;
+  .content {
+    display: none;
+  }
 }
 
 
+
+
+
+/* Navbar icon IMDB */
 .chrome {
 	font-family: "Montserrat";
 	font-weight:900;
@@ -152,8 +135,6 @@
     z-index:-1;
   }
 }
-
-  
 .shine::after {
 	content:attr(data-text);
 	background-image:linear-gradient(225deg,transparent 53%,white 55%,transparent 58%);
@@ -169,9 +150,11 @@
 	animation:shine 10s ease infinite;
 	animation-delay:var(--shine-delay,0s);
 }
-  
 @keyframes shine{
 	0%{background-position:0% 51%}
 	50%{background-position:100% 50%}
 	100%{background-position:0% 51%}
 }
+
+
+
