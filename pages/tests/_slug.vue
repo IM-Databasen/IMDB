@@ -1,18 +1,17 @@
 <template>
     <div class="test">
-        <h1>{{test.name}}</h1>
-        <img :src="test.image" :alt="test.name">
-        <p>{{test.description}}</p>
-        <hr />
-        <ul style="list-style: none;">
-          <li v-for="(item, index) in test.questions">
-            <button type="button" class="collapsible">{{ item.q }}</button>
-            <div class="content">
-              <p>Svar: {{ item.a }}</p>
-            </div>
-          </li>
-        </ul>
-        
+      <h1>{{test.name}}</h1>
+      <img :src="test.image" :alt="test.name">
+      <p>{{test.description}}</p>
+      <hr />
+      <ul style="list-style: none;">
+        <li v-for="(item, index) in test.questions">
+          <button type="button" class="collapsible">{{ item.q }}</button>
+          <div class="content">
+            <p>Svar: {{ item.a }}</p>
+          </div>
+        </li>
+      </ul>
     </div>
   </template>
   
