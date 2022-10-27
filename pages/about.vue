@@ -41,7 +41,7 @@
           <h1 class="mb-4 text-center text-2xl text-gray-900 font-bold md:text-4xl">IMDB</h1>
           <p class="text-gray-600 lg:w-8/12 lg:mx-auto">Beskrivelse om ka IMDB e komme</p>
         </div>
-        <div class="grid gap-12 items-center md:grid-cols-3">
+        <div class="grid gap-12 items-center md:grid-cols-2">
           <div class="space-y-4 text-center">
             <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
               src="https://avatars.githubusercontent.com/u/89910775?v=4" alt="theo" loading="lazy" width="640"
@@ -52,7 +52,7 @@
             </div>
           </div>
           <div class="space-y-4 text-center">
-            <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-48 md:h-64 lg:w-64 lg:h-64"
+            <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
               src="https://avatars.githubusercontent.com/u/89910638?v=4" alt="lartrags" loading="lazy" width="1000"
               height="667">
             <div>
