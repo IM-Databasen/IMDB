@@ -8,7 +8,7 @@
         {{ item.description }}
       </p>
       <h2 class="text-sm mb-5">
-        Publisert {{ item.createdAt }}
+        Publisert: {{ item.createdAt }}
       </h2>
       <nuxt-link :to="'/tests/' + item.slug"
         class="rounded py-2 px-4 text-center text-white bg-gray-600 hover:bg-gray-700">
@@ -34,26 +34,5 @@ export default {
     const cards = await $content("tests").fetch();
     return { cards };
   },
-  // data() {
-  //   return {
-  //     cards: [
-  //       {
-  //         name: "Nettverk",
-  //         image: "/images/img1.webp",
-  //         description: "Her komme nettverkssvar",
-  //       },
-  //       {
-  //         name: "Photoshop",
-  //         image: "/images/img2.webp",
-  //         description: "mer info komme",
-  //       },
-  //       {
-  //         name: "Oktettshit",
-  //         image: "/images/img3.webp",
-  //         description: "mer info komme",
-  //       },
-  //     ],
-  //   };
-  // },
 };
 </script>

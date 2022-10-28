@@ -1,9 +1,8 @@
 <template>
   <div class="test">
     <h1>
-      {{test.name}}
+      {{test.title}}
     </h1>
-    <img :src="test.image" :alt="test.name">
     <p>
       {{test.description}}
     </p>
@@ -12,89 +11,29 @@
       <li v-for="item in test.questions" :key="item.id" class="cursor-pointer my-2 border-b-2 border-dark-900">
         <span class="font-bold text-xl tracking-tight text-gray-500 flex flex-row justify-between items-center collapsible">
           <p>
-            {{ item.q }}
+            {{ item.question }}
           </p>
           <svg class="text-gray-500 mr-1 bi bi-arrow-down-short" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
           </svg>
         </span>
         <div class="text-gray-500 text-md p-2 content">
-          Svar: {{ item.a }}
+          Svar: {{ item.answer }}
         </div>
       </li>
     </ul>
-    <nuxt-content :document="page" ></nuxt-content>
   </div>
 </template>
   
   <script>
   export default {
-    data() {
-      return {
-        currentTest: {},
-        test: {},
-        ipStuff: {}
-      }
-    },
-    watch: {
-      '$route.query': '$fetch'
-    }, 
-    async fetch() {
-      this.ipStuff = await this.$http.$get('https://api.db-ip.com/v2/free/self')
-      this.tests[0].questions[0].a = this.ipStuff.ipAddress
-    },
     async asyncData({ params, $content }) {
-      let proover = [
-        {
-          name: "Nettverk",
-          image: "/images/img1.webp",
-          description: "Her komme nettverkssvar",
-          questions: [
-            { 
-              q: "Hva er en IP-adresse?",
-              a: 'Dette er en Ip addresse '
-            }
-          ]
-        },
-        {
-          name: "Photoshop",
-          image: "/images/img2.webp",
-          description: "mer info komme",
-          questions: [
-            { 
-              q: "Spørsmål 1",
-              a: 'Idk.'
-            },
-            { 
-              q: "Spørsmål 2",
-              a: 'Idk.'
-            },
-            { 
-              q: "Spørsmål 3",
-              a: 'Idk.'
-            }
-          ]
-        },
-        {
-          name: "Oktettshit",
-          image: "/images/img3.webp",
-          description: "mer info komme",
-          questions: [
-          { 
-              q: "Hva er en Okett?",
-              a: 'Idk.'
-            }
-          ]
-        },
-      ]
-      if (!params || params === '{}' || params.slug == '' || params.slug > proover.length) return
+      if (!params || params === '{}' || params.slug == '') return
 
-      const page = await $content(`tests/${params.slug}`).fetch()
+      const test = await $content(`tests/${params.slug}`).fetch()
 
       return {
-        test: proover[params.slug] ? proover[params.slug] : proover.find((test) => test.name.toLowerCase() === params.slug.toLowerCase()),
-        tests: proover,
-        page
+        test
       }
     },
     mounted() {
