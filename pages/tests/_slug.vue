@@ -1,14 +1,20 @@
 <template>
   <div class="test">
-    <h1>{{ test.name }}</h1>
+    <h1>
+      {{ test.name }}
+    </h1>
     <img :src="test.image" :alt="test.name">
-    <p>{{ test.description }}</p>
+    <p>
+      {{ test.description }}
+    </p>
     <hr />
     <ul class="accordion w-full bg-gray-50 rounded-lg shadow-lg p-2 mt-3">
       <li v-for="item in test.questions" :key="item.id" class="cursor-pointer my-2 border-b-2 border-dark-900">
         <span
           class="font-bold text-xl tracking-tight text-gray-500 flex flex-row justify-between items-center collapsible">
-          <p>{{ item.q }}</p>
+          <p>
+            {{ item.q }}
+          </p>
           <svg class="text-gray-500 mr-1 bi bi-arrow-down-short" xmlns="http://www.w3.org/2000/svg" width="16"
             height="16" fill="currentColor" viewBox="0 0 16 16">
             <path fill-rule="evenodd"
@@ -93,9 +99,6 @@ export default {
       test: proover[params.slug] ? proover[params.slug] : proover.find((test) => test.name.toLowerCase() === params.slug.toLowerCase())
     }
   },
-  methods: {
-
-  },
   mounted() {
     var coll = document.getElementsByClassName("collapsible");
     var i;
@@ -112,8 +115,5 @@ export default {
       });
     }
   },
-  computed: {
-
-  }
-}
+};
 </script>

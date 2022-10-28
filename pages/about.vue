@@ -7,11 +7,15 @@
             <img src="../static/images/placeholder650_550.webp" alt="image" width="650px" height="550px">
           </div>
           <div class="md:7/12 lg:w-6/12">
-            <h1 class="text-2xl text-gray-900 font-bold md:text-4xl">Nuxt development is carried out by passionate
-              developers</h1>
-            <p class="mt-6 text-gray-600">Yes. vetkje ka eg ska stappa her.</p>
-            <p class="mt-4 text-gray-600"> Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita
-              at? Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.</p>
+            <h1 class="text-2xl text-gray-900 font-bold md:text-4xl">
+              Nuxt development is carried out by passionate developers
+            </h1>
+            <p class="mt-6 text-gray-600">
+              Yes. vetkje ka eg ska stappa her.
+            </p>
+            <p class="mt-4 text-gray-600">
+              Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at? Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.
+            </p>
           </div>
         </div>
       </div>
@@ -30,16 +34,21 @@
             <line x1="45.1" y1="30.4" x2="0" y2="30.4" class="stroke-primary"
               style="stroke-width: 2;stroke-miterlimit: 10;"></line>
           </svg>
-          <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Gå aldri på en smell igjen med IMDB.
-            Me vet svarene på Rune.</p>
+          <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">
+            Gå aldri på en smell igjen med IMDB. Me vet svarene på Rune.
+          </p>
         </header>
       </div>
     </div>
     <div class="py-20 bg-gray-50">
       <div class="container mx-auto px-6 md:px-12 xl:px-32">
         <div class="mb-16 text-center">
-          <h1 class="mb-4 text-center text-2xl text-gray-900 font-bold md:text-4xl">IMDB</h1>
-          <p class="text-gray-600 lg:w-8/12 lg:mx-auto">Beskrivelse om ka IMDB e komme</p>
+          <h1 class="mb-4 text-center text-2xl text-gray-900 font-bold md:text-4xl">
+            IMDB
+          </h1>
+          <p class="text-gray-600 lg:w-8/12 lg:mx-auto">
+            Beskrivelse om ka IMDB e komme
+          </p>
         </div>
         <div class="grid gap-12 items-center md:grid-cols-2">
           <div class="space-y-4 text-center">
@@ -47,8 +56,12 @@
               src="https://avatars.githubusercontent.com/u/89910775?v=4" alt="theo" loading="lazy" width="640"
               height="667">
             <div>
-              <h2 class="text-2xl">Theo</h2>
-              <span class="block text-sm text-gray-500">Tittel</span>
+              <h2 class="text-2xl">
+                Theo
+              </h2>
+              <span class="block text-sm text-gray-500">
+                Tittel
+              </span>
             </div>
           </div>
           <div class="space-y-4 text-center">
@@ -56,8 +69,12 @@
               src="https://avatars.githubusercontent.com/u/89910638?v=4" alt="lartrags" loading="lazy" width="1000"
               height="667">
             <div>
-              <h2 class="text-2xl">Lars Erik</h2>
-              <span class="block text-sm text-gray-500">Tittel</span>
+              <h2 class="text-2xl">
+                Lars Erik
+              </h2>
+              <span class="block text-sm text-gray-500">
+                Tittel
+              </span>
             </div>
           </div>
           <div class="space-y-4 text-center">
@@ -65,8 +82,12 @@
               src="https://avatars.githubusercontent.com/u/71834553?v=4" alt="arvid" loading="lazy" width="1000"
               height="667">
             <div>
-              <h2 class="text-2xl">Arvid</h2>
-              <span class="block text-sm text-gray-500">Tittel</span>
+              <h2 class="text-2xl">
+                Arvid
+              </h2>
+              <span class="block text-sm text-gray-500">
+                Tittel
+              </span>
             </div>
           </div>
           <div class="space-y-4 text-center">
@@ -74,8 +95,12 @@
               src="https://avatars.githubusercontent.com/u/78083291?v=4" alt="erling" loading="lazy" width="1000"
               height="667">
             <div>
-              <h2 class="text-2xl">Erling</h2>
-              <span class="block text-sm text-gray-500">Tittel</span>
+              <h2 class="text-2xl">
+                Erling
+              </h2>
+              <span class="block text-sm text-gray-500">
+                Tittel
+              </span>
             </div>
           </div>
         </div>
@@ -85,8 +110,7 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-export default Vue.extend({
+export default {
   head: {
     title: "IMDB - About",
     meta: [
@@ -97,5 +121,5 @@ export default Vue.extend({
       },
     ],
   },
-});
+};
 </script>

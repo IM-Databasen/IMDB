@@ -40,12 +40,5 @@ export default {
   },
   name: "Index",
   transition: "slide-bottom",
-  components: {},
-  data() {
-    return {};
-  },
-  methods: {},
-  async mounted() { },
-  computed: {},
 };
 </script>
