@@ -2,7 +2,9 @@
   <nav class="bg-gray-100 flex flex-row items-center justify-between p-5 h-fit sm:h-20">
     <div class="flex flex-col items-center text-4xl font-extralight sm:flex-row">
       <img src="../static/faviconV2.avif" alt="IMDB Logo" width="256px" height="256px" class="w-16 ml-5" />
-      <h1 class="pl-5 sm:pl-0">IMDB</h1>
+      <h1 class="pl-5 sm:pl-0">
+        IMDB
+      </h1>
     </div>
     <div class="flex flex-col sm:flex-row sm:ml-6">
       <nuxt-link to="/" :class="String($nuxt.$route.path) == '/' ? 'bg-gray-200' : 'hover:bg-gray-300'"
