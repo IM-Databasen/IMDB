@@ -1,13 +1,12 @@
 <template>
   <div class="test">
-    <h1>
+    <h1 class="text-xl font-bold">
       {{test.title}}
     </h1>
-    <p>
+    <p class="font-light">
       {{test.description}}
     </p>
-    <hr />
-    <ul class="accordion w-full bg-gray-50 rounded-lg shadow-lg p-2 mt-3">
+    <ul v-if="test.questions" class="accordion w-full bg-gray-50 rounded-lg shadow-lg p-2 mt-3">
       <li v-for="item in test.questions" :key="item.id" class="cursor-pointer my-2 border-b-2 border-dark-900">
         <span class="font-bold text-xl tracking-tight text-gray-500 flex flex-row justify-between items-center collapsible">
           <p>
@@ -22,6 +21,8 @@
         </div>
       </li>
     </ul>
+    <p v-else>Svar til denne prøven finnes ikke enda</p>
+    
   </div>
 </template>
   
@@ -38,9 +39,8 @@
     },
     mounted() {
       var coll = document.getElementsByClassName("collapsible");
-      var i;
 
-      for (i = 0; i < coll.length; i++) {
+      for (let i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function() {
           this.classList.toggle("active");
           var content = this.nextElementSibling;
