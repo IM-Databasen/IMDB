@@ -1,4 +1,4 @@
 ---
-title: Introduction
-description: Learn how to use @nuxt/content.
+title: Photoshop
+description: Svar til photoshop
 ---

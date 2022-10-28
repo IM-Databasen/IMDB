@@ -16,9 +16,6 @@
             <p class="mt-4 text-gray-600">
               Hmm ja. Her kan du då altså få svar te prøvene du har på IM.
             </p>
-            <p class="mt-4 text-gray-600">
-              Bildet te venstre e iallefall ikkje stjåle fra ei elle anna random nettsida
-            </p>
           </div>
         </div>
       </div>
