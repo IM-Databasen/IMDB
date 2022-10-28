@@ -20,22 +20,26 @@
         </div>
       </div>
     </div>
+    <Suggestions />
   </div>
 </template>
 
 <script>
+import Suggestions from '~/components/Suggestions.vue';
+
 export default {
-  head: {
-    title: "IMDB - Home",
-    meta: [
-      {
-        hid: "description",
-        name: "description",
-        content: "Home page",
-      },
-    ],
-  },
-  name: "Index",
-  transition: "slide-bottom",
+    head: {
+        title: "IMDB - Home",
+        meta: [
+            {
+                hid: "description",
+                name: "description",
+                content: "Home page",
+            },
+        ],
+    },
+    name: "Index",
+    transition: "slide-bottom",
+    components: { Suggestions }
 };
 </script>

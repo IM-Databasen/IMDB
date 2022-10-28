@@ -22,7 +22,6 @@
       </li>
     </ul>
     <p v-else>Svar til denne prøven finnes ikke enda</p>
-    
   </div>
 </template>
   
