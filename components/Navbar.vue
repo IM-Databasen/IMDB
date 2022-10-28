@@ -13,7 +13,7 @@
         class="py-2 px-3 m-1 rounded-md text-sm font-medium">
         Ka e IMDB?
       </nuxt-link>
-      <nuxt-link to="/tests" :class="String($nuxt.$route.path) == '/tests' ? 'bg-gray-200' : 'hover:bg-gray-300'"
+      <nuxt-link to="/tests" :class="String($nuxt.$route.path).startsWith('/tests') ? 'bg-gray-200' : 'hover:bg-gray-300'"
         class="py-2 px-3 m-1 rounded-md text-sm font-medium">
         Prøver
       </nuxt-link>
@@ -22,7 +22,17 @@
 </template>
 
 <script>
-export default {};
+
+export default {
+  template: "navbar",
+  transition: "slide-bottom",
+  async asyncData({ params, route }) {
+    return {
+      params: params,
+      route: route
+    }
+  },
+}
 </script>
 
 <style scoped>

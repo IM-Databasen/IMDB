@@ -14,7 +14,8 @@
               Yes. vetkje ka eg ska stappa her.
             </p>
             <p class="mt-4 text-gray-600">
-              Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at? Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.
+              Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at? Asperiores nemo possimus
+              nesciunt dicta veniam aspernatur quam mollitia.
             </p>
           </div>
         </div>
@@ -22,7 +23,6 @@
     </div>
     <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0 bg-white">
       <div class="container xl:max-w-6xl mx-auto px-4">
-        <!-- Heading start -->
         <header class="text-center mx-auto mb-12 lg:px-20">
           <h2 class="text-2xl leading-normal mb-2 font-bold text-black">Koffår bruka IMDB?</h2>
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -51,55 +51,15 @@
           </p>
         </div>
         <div class="grid gap-12 items-center md:grid-cols-2">
-          <div class="space-y-4 text-center">
-            <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
-              src="https://avatars.githubusercontent.com/u/89910775?v=4" alt="theo" loading="lazy" width="640"
-              height="667">
+          <div v-for="(person, index) in people" :key="person.name + index" class="space-y-4 text-center">
+            <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64" :src="person.image"
+              :alt="person.name" loading="lazy" width="640" height="667">
             <div>
               <h2 class="text-2xl">
-                Theo
+                {{ person.name }}
               </h2>
               <span class="block text-sm text-gray-500">
-                Tittel
-              </span>
-            </div>
-          </div>
-          <div class="space-y-4 text-center">
-            <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
-              src="https://avatars.githubusercontent.com/u/89910638?v=4" alt="lartrags" loading="lazy" width="1000"
-              height="667">
-            <div>
-              <h2 class="text-2xl">
-                Lars Erik
-              </h2>
-              <span class="block text-sm text-gray-500">
-                Tittel
-              </span>
-            </div>
-          </div>
-          <div class="space-y-4 text-center">
-            <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
-              src="https://avatars.githubusercontent.com/u/71834553?v=4" alt="arvid" loading="lazy" width="1000"
-              height="667">
-            <div>
-              <h2 class="text-2xl">
-                Arvid
-              </h2>
-              <span class="block text-sm text-gray-500">
-                Tittel
-              </span>
-            </div>
-          </div>
-          <div class="space-y-4 text-center">
-            <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
-              src="https://avatars.githubusercontent.com/u/78083291?v=4" alt="erling" loading="lazy" width="1000"
-              height="667">
-            <div>
-              <h2 class="text-2xl">
-                Erling
-              </h2>
-              <span class="block text-sm text-gray-500">
-                Tittel
+                {{ person.title }}
               </span>
             </div>
           </div>
@@ -121,5 +81,31 @@ export default {
       },
     ],
   },
+  data() {
+    return {
+      people: [
+        {
+          name: "Theo",
+          title: "Tittel",
+          image: "https://avatars.githubusercontent.com/u/89910775?v=4",
+        },
+        {
+          name: "Lars Erik",
+          title: "Tittel",
+          image: "https://avatars.githubusercontent.com/u/89910638?v=4",
+        },
+        {
+          name: "Arvid",
+          title: "Tittel",
+          image: "https://avatars.githubusercontent.com/u/71834553?v=4",
+        },
+        {
+          name: "Erling",
+          title: "Tittel",
+          image: "https://avatars.githubusercontent.com/u/78083291?v=4",
+        },
+      ]
+    }
+  }
 };
 </script>
