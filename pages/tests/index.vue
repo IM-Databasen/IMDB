@@ -51,11 +51,5 @@ export default {
       ],
     };
   },
-  methods: {
-
-  },
-  mounted() {
-  },
-  computed: {},
 };
 </script>
