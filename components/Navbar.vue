@@ -19,6 +19,10 @@
         class="py-2 px-3 m-1 rounded-md text-sm font-medium">
         Prøver
       </nuxt-link>
+      <nuxt-link to="/memes" :class="String($nuxt.$route.path).startsWith('/memes') ? 'bg-gray-200' : 'hover:bg-gray-300'"
+        class="py-2 px-3 m-1 rounded-md text-sm font-medium">
+        Memes
+      </nuxt-link>
     </div>
   </nav>
 </template>
