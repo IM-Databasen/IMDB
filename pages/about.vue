@@ -17,7 +17,10 @@
         </div>
       </div>
     </div>
-    <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0 bg-white">
+    
+    <hr />
+
+    <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0">
       <div class="container xl:max-w-6xl mx-auto px-4">
         <header class="text-center mx-auto mb-12 lg:px-20">
           <h2 class="text-2xl leading-normal mb-2 font-bold text-black">Koffår bruka IMDB?</h2>
@@ -36,7 +39,10 @@
         </header>
       </div>
     </div>
-    <div class="py-20 bg-gray-50">
+
+    <hr />
+
+    <div class="mt-6 py-20 bg-gray-50">
       <div class="container mx-auto px-6 md:px-12 xl:px-32">
         <div class="mb-16 text-center">
           <h1 class="mb-4 text-center text-xl text-gray-900 font-bold md:text-xl">
