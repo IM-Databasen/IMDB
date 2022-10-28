@@ -11,7 +11,7 @@
               IMDB - Få svarene te dine prøver
             </h2>
             <p class="mt-6 text-gray-600">
-              Yes. vetkje ka eg ska stappa her.
+              Yes. Du hørte riktig.
             </p>
             <p class="mt-4 text-gray-600">
               Hmm ja. Her kan du då altså få svar te prøvene du har på IM.

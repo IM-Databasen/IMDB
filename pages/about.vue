@@ -8,14 +8,10 @@
           </div>
           <div class="md:7/12 lg:w-6/12">
             <h1 class="text-2xl text-gray-900 font-bold md:text-4xl">
-              Nuxt development is carried out by passionate developers
+              IMDB - Få svarene te dine prøver
             </h1>
             <p class="mt-6 text-gray-600">
-              Yes. vetkje ka eg ska stappa her.
-            </p>
-            <p class="mt-4 text-gray-600">
-              Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at? Asperiores nemo possimus
-              nesciunt dicta veniam aspernatur quam mollitia.
+              Sorry, svar på prøver er ikke tilgjengelig enda.
             </p>
           </div>
         </div>
@@ -35,7 +31,7 @@
               style="stroke-width: 2;stroke-miterlimit: 10;"></line>
           </svg>
           <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">
-            Gå aldri på en smell igjen med IMDB. Me vet svarene på Rune.
+            Hør aldri "detta konne du gjort bedre" fra Odd Arne igjen med IMDB. Me har svarene på du trenge.
           </p>
         </header>
       </div>
@@ -43,26 +39,23 @@
     <div class="py-20 bg-gray-50">
       <div class="container mx-auto px-6 md:px-12 xl:px-32">
         <div class="mb-16 text-center">
-          <h1 class="mb-4 text-center text-2xl text-gray-900 font-bold md:text-4xl">
-            IMDB
+          <h1 class="mb-4 text-center text-xl text-gray-900 font-bold md:text-xl">
+            IMDB blir utvikla og vedlikeholdt av: 
           </h1>
-          <p class="text-gray-600 lg:w-8/12 lg:mx-auto">
-            Beskrivelse om ka IMDB e komme
-          </p>
         </div>
         <div class="grid gap-12 items-center md:grid-cols-2">
-          <div v-for="(person, index) in people" :key="person.name + index" class="space-y-4 text-center">
+          <a v-for="(person, index) in people" :key="person.name + index" class="space-y-4 text-center" :href="person.giturl" target="_blank">
             <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64" :src="person.image"
               :alt="person.name" loading="lazy" width="640" height="667">
             <div>
-              <h2 class="text-2xl">
+              <p class="text-2xl">
                 {{ person.name }}
-              </h2>
+              </p>
               <span class="block text-sm text-gray-500">
                 {{ person.title }}
               </span>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -88,21 +81,25 @@ export default {
           name: "Theo",
           title: "Tittel",
           image: "https://avatars.githubusercontent.com/u/89910775?v=4",
+          giturl: "https://github.com/IG9TE",
         },
         {
           name: "Lars Erik",
           title: "Tittel",
           image: "https://avatars.githubusercontent.com/u/89910638?v=4",
+          giturl: "https://github.com/Lartrax",
         },
         {
           name: "Arvid",
           title: "Tittel",
           image: "https://avatars.githubusercontent.com/u/71834553?v=4",
+          giturl: "https://github.com/ArvidWedtstein",
         },
         {
           name: "Erling",
           title: "Tittel",
           image: "https://avatars.githubusercontent.com/u/78083291?v=4",
+          giturl: "https://github.com/Ahldroni",
         },
       ]
     }
