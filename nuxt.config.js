@@ -46,5 +46,7 @@ export default {
     fallback: true,
   },
 
-  tailwindcss: {},
+  serverMiddleware: {
+    '/api': '~/middleware/index.js'
+  },
 };

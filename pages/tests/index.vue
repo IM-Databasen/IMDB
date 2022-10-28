@@ -46,8 +46,9 @@ export default {
       search: "",
     }
   },
-  async asyncData({ $content }) {
+  async asyncData({ $content, $http }) {
     const cards = await $content("tests").fetch();
+
     return { cards };
   },
   computed: {
