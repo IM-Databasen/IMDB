@@ -1,5 +1,5 @@
 <template>
-  <article class="test">
+  <div class="test">
     <h1>{{test.name}}</h1>
     <img :src="test.image" :alt="test.name">
     <p>{{test.description}}</p>
@@ -17,8 +17,8 @@
         </div>
       </li>
     </ul>
-    <nuxt-content :document="page" />
-  </article>
+    <nuxt-content :document="page" ></nuxt-content>
+  </div>
 </template>
   
   <script>
@@ -91,9 +91,6 @@
         page
       }
     },
-    methods: {
-      
-    },
     mounted() {
       var coll = document.getElementsByClassName("collapsible");
       var i;
@@ -110,8 +107,5 @@
         });
       }
     },
-    computed: {
-
-    }
   }
-  </script>
+</script>

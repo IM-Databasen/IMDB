@@ -1,15 +1,20 @@
 <template>
-  <div class="bg-gray-200 pt-3">
-    <main>
-      <div class="flex justify-between grid grid-cols-3 gap-6 m-10 mb-10">
-        <article v-for="(item, index) in proover" :key="item.name + index" class="container bg-white shadow-2xl rounded-2xl p-5">
-          <h1 class="font-bold text-yellow-500">{{ item.name }}</h1>
-          <p class="font-light text-gray-500 hover:font-bold">{{ item.description }}</p>
-          <h6 class="text-sm text-gray-300 mb-5">Publisert ein elle anna dato</h6>
-          <nuxt-link :to="'/tests/' + item.name" class="rounded-lg py-2 px-4 text-center text-white bg-yellow-400 hover:bg-yellow-500">Vis Prøve</nuxt-link>
-        </article>
-      </div>
-    </main>
+  <div class="grid grid-rows-1 md:grid-cols-3">
+    <article v-for="item in cards" :key="item.id" class="shadow rounded-2xl p-5">
+      <h1 class="font-bold">
+        {{ item.name }}
+      </h1>
+      <p class="font-light">
+        {{ item.description }}
+      </p>
+      <h2 class="text-sm mb-5">
+        Publisert ein elle anna dato
+      </h2>
+      <nuxt-link :to="'/tests/' + item.name"
+        class="rounded py-2 px-4 text-center text-white bg-gray-600 hover:bg-gray-700">
+        Vis Prøve
+      </nuxt-link>
+    </article>
   </div>
 </template>
 
@@ -27,7 +32,7 @@ export default {
   },
   data() {
     return {
-      proover: [
+      cards: [
         {
           name: "Nettverk",
           image: "/images/img1.webp",
@@ -47,7 +52,7 @@ export default {
     };
   },
   methods: {
-    
+
   },
   mounted() {
   },

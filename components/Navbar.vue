@@ -1,82 +1,30 @@
 <template>
-  <nav class="bg-gray-800">
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-      <div class="relative flex h-16 items-center justify-between">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-          <!-- Mobile menu button-->
-          <button type="button"
-            class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-            aria-controls="mobile-menu" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <!--
-            Icon when menu is closed.
-
-            Heroicon name: outline/bars-3
-
-            Menu open: "hidden", Menu closed: "block"
-          -->
-            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-              stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-            <!--
-            Icon when menu is open.
-
-            Heroicon name: outline/x-mark
-
-            Menu open: "block", Menu closed: "hidden"
-          -->
-            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-              stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-          <div class="flex flex-shrink-0 items-center">
-            <div class="block h-8 w-auto chrome shine" data-text="IMDB" data-testid="navbar-brand">IMDB</div>
-          </div>
-          <div class="hidden sm:ml-6 sm:block">
-            <div class="flex space-x-4">
-              <nuxt-link to="/" :class="String($nuxt.$route.path) === '/' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Him</nuxt-link>
-              <nuxt-link to="/about" :class="String($nuxt.$route.path) == '/about' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">Ka e IMDB?</nuxt-link>
-              <nuxt-link to="/tests" :class="String($nuxt.$route.path).startsWith('/tests') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="px-3 py-2 rounded-md text-sm font-medium">Prøver</nuxt-link>
-            </div>
-          </div>
-        </div>
-      </div>
+  <nav class="bg-gray-100 flex flex-row items-center justify-between p-5 h-fit sm:h-20">
+    <div class="flex flex-col items-center text-4xl font-extralight sm:flex-row">
+      <img src="../static/faviconV2.avif" alt="IMDB Logo" width="256px" height="256px" class="w-16 ml-5" />
+      <h1 class="pl-5 sm:pl-0">IMDB</h1>
     </div>
-
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden" id="mobile-menu">
-      <div class="space-y-1 px-2 pt-2 pb-3">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <nuxt-link to="/" :class="$nuxt.$route.path === '/' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Him</nuxt-link>
-
-        <nuxt-link to="/about" :class="$nuxt.$route.path === '/about' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class=" block px-3 py-2 rounded-md text-base font-medium">Ka e IMDB?</nuxt-link>
-
-        <nuxt-link to="/tests" :class="$nuxt.$route.path === '/tests' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'" class="block px-3 py-2 rounded-md text-base font-medium">Prøver</nuxt-link>
-      </div>
+    <div class="flex flex-col sm:flex-row sm:ml-6">
+      <nuxt-link to="/" :class="String($nuxt.$route.path) == '/' ? 'bg-gray-200' : 'hover:bg-gray-300'"
+        class="py-2 px-3 m-1 rounded-md text-sm font-medium">
+        Him
+      </nuxt-link>
+      <nuxt-link to="/about" :class="String($nuxt.$route.path) == '/about' ? 'bg-gray-200' : 'hover:bg-gray-300'"
+        class="py-2 px-3 m-1 rounded-md text-sm font-medium">
+        Ka e IMDB?
+      </nuxt-link>
+      <nuxt-link to="/tests" :class="String($nuxt.$route.path) == '/tests' ? 'bg-gray-200' : 'hover:bg-gray-300'"
+        class="py-2 px-3 m-1 rounded-md text-sm font-medium">
+        Prøver
+      </nuxt-link>
     </div>
   </nav>
 </template>
 
-
 <script>
-import Vue from "vue";
-import Navbar from "~/components/Navbar.vue";
-export default Vue.extend({
-  template: "navbar",
-  transition: "slide-bottom",
-  async asyncData({ params, route }) {
-    return {
-      params: params,
-      route: route
-    }
-  },
-
-  methods: {},
-  async mounted() {},
-  computed: {},
-});
+export default {};
 </script>
+
+<style scoped>
+
+</style>
