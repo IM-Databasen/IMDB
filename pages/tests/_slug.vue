@@ -1,37 +1,43 @@
 <template>
-    <div class="test">
-      <h1>{{test.name}}</h1>
-      <img :src="test.image" :alt="test.name">
-      <p>{{test.description}}</p>
-      <hr />
-      <ul class="accordion w-full bg-gray-50 rounded-lg shadow-lg p-2 mt-3">
-        <li v-for="(item, index) in test.questions" class="cursor-pointer my-2 border-b-2 border-dark-900">
-          <span class="font-bold text-xl tracking-tight text-gray-500 flex flex-row justify-between items-center collapsible">
-            <p>{{ item.q }}</p>
-            <svg class="text-gray-500 mr-1 bi bi-arrow-down-short" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
-            </svg>
-          </span>
-          <div class="text-gray-500 text-md p-2 content">
-            Svar: {{ item.a }}
-          </div>
-        </li>
-      </ul>
-    </div>
-  </template>
+  <article class="test">
+    <h1>{{test.name}}</h1>
+    <img :src="test.image" :alt="test.name">
+    <p>{{test.description}}</p>
+    <hr />
+    <ul class="accordion w-full bg-gray-50 rounded-lg shadow-lg p-2 mt-3">
+      <li v-for="(item, index) in test.questions" class="cursor-pointer my-2 border-b-2 border-dark-900">
+        <span class="font-bold text-xl tracking-tight text-gray-500 flex flex-row justify-between items-center collapsible">
+          <p>{{ item.q }}</p>
+          <svg class="text-gray-500 mr-1 bi bi-arrow-down-short" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+          </svg>
+        </span>
+        <div class="text-gray-500 text-md p-2 content">
+          Svar: {{ item.a }}
+        </div>
+      </li>
+    </ul>
+    <nuxt-content :document="page" />
+  </article>
+</template>
   
   <script>
   export default {
     data() {
       return {
         currentTest: {},
-        test: {}
+        test: {},
+        ipStuff: {}
       }
     },
     watch: {
       '$route.query': '$fetch'
     }, 
-    async asyncData({ params }) {
+    async fetch() {
+      this.ipStuff = await this.$http.$get('https://api.db-ip.com/v2/free/self')
+      this.tests[0].questions[0].a = this.ipStuff.ipAddress
+    },
+    async asyncData({ params, $content }) {
       let proover = [
         {
           name: "Nettverk",
@@ -40,7 +46,7 @@
           questions: [
             { 
               q: "Hva er en IP-adresse?",
-              a: 'Idk.'
+              a: 'Dette er en Ip addresse '
             }
           ]
         },
@@ -76,8 +82,13 @@
         },
       ]
       if (!params || params === '{}' || params.slug == '' || params.slug > proover.length) return
+
+      const page = await $content(`tests/${params.slug}`).fetch()
+
       return {
-        test: proover[params.slug] ? proover[params.slug] : proover.find((test) => test.name.toLowerCase() === params.slug.toLowerCase())
+        test: proover[params.slug] ? proover[params.slug] : proover.find((test) => test.name.toLowerCase() === params.slug.toLowerCase()),
+        tests: proover,
+        page
       }
     },
     methods: {
