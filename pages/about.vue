@@ -79,25 +79,25 @@ export default {
       people: [
         {
           name: "Theo",
-          title: "Tittel",
+          title: "Haugaland Kraft",
           image: "https://avatars.githubusercontent.com/u/89910775?v=4",
           giturl: "https://github.com/IG9TE",
         },
         {
           name: "Lars Erik",
-          title: "Tittel",
+          title: "Haugaland Kraft",
           image: "https://avatars.githubusercontent.com/u/89910638?v=4",
           giturl: "https://github.com/Lartrax",
         },
         {
           name: "Arvid",
-          title: "Tittel",
+          title: "Ølen Betong",
           image: "https://avatars.githubusercontent.com/u/71834553?v=4",
           giturl: "https://github.com/ArvidWedtstein",
         },
         {
           name: "Erling",
-          title: "Tittel",
+          title: "Haugaland VGS - IT",
           image: "https://avatars.githubusercontent.com/u/78083291?v=4",
           giturl: "https://github.com/Ahldroni",
         },
