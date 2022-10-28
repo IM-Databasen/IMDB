@@ -9,7 +9,7 @@
     </p>
     <hr />
     <ul class="accordion w-full bg-gray-50 rounded-lg shadow-lg p-2 mt-3">
-      <li v-for="(item, index) in test.questions" class="cursor-pointer my-2 border-b-2 border-dark-900">
+      <li v-for="item in test.questions" :key="item.id" class="cursor-pointer my-2 border-b-2 border-dark-900">
         <span class="font-bold text-xl tracking-tight text-gray-500 flex flex-row justify-between items-center collapsible">
           <p>
             {{ item.q }}
