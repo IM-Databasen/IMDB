@@ -37,7 +37,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/http", "@nuxt/content", "@nuxt/image"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/http", "@nuxt/content"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
@@ -47,11 +47,6 @@ export default {
   },
 
   serverMiddleware: {
-    '/_ipx': '~/server/middleware/ipx.js',
     '/api': '~/middleware/index.js',
-  },
-
-  image: {
-
   },
 };

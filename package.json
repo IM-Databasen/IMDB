@@ -12,14 +12,12 @@
     "@nuxt/content": "^1.15.1",
     "@nuxt/http": "^0.6.4",
     "core-js": "^3.25.3",
-    "ipx": "^0.9.11",
     "nuxt": "^2.15.8",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10"
   },
   "devDependencies": {
-    "@nuxt/image": "^0.7.1",
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/tailwindcss": "^6.1.1",
