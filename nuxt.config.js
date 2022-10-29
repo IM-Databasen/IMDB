@@ -47,7 +47,8 @@ export default {
   },
 
   serverMiddleware: {
-    '/api': '~/middleware/index.js'
+    '/_ipx': '~/server/middleware/ipx.js',
+    '/api': '~/middleware/index.js',
   },
 
   image: {
