@@ -7,6 +7,7 @@
         >
           <div class="md:5/12 lg:w-5/12">
             <img
+              fetchpriority="high"
               src="../static/placeholder650_550.webp"
               alt="image"
               width="650px"
