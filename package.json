@@ -14,8 +14,10 @@
     "core-js": "^3.25.3",
     "ipx": "^0.9.11",
     "nuxt": "^2.15.8",
+    "socket.io": "^4.5.3",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
+    "vue-socket.io": "^3.0.10",
     "vue-template-compiler": "^2.7.10"
   },
   "devDependencies": {

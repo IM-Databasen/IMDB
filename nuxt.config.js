@@ -25,7 +25,9 @@ export default {
   css: ["./assets/css/main.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/socket.client.js' },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -48,7 +50,7 @@ export default {
   },
 
   serverMiddleware: {
-    "/api": "~/middleware/index.js",
+    "/api": "~/middleware/auth.js",
   },
 
   image: {
