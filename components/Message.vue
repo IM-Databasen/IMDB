@@ -1,31 +1,19 @@
 <template>
-    <div style="display: flex; flex-direction: row">
-      <p
-        v-if="isSystemMessage"
-        class="text-center font-italic system"
-      >
-        {{ message.text }}
-      </p>
-      <div style="display: flex; flex-direction: column;"
-        v-else
-        class="msg-wrapper"
-      >
-        <div style="display: flex; flex-direction: row"
-          :class="{ owner }"
-        >
-          <div style="display: flex; flex-direction: column;">
-            <span class="font-weight-bold">{{ message.name }}</span>
-            <p class="mb-0">
-              {{ message.text }}
-            </p>
-          </div>
-          <div style="display: flex; flex-direction: column;" cols="auto">
-            <span class="msg__date ml-3">{{ message.time }}</span>
-          </div>
+  <div class="chat-message">
+    <div class="flex items-end" :class="{'justify-end': owner}">
+      <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start" :class="{ 'order-2 items-start': !owner, 'order-1 items-end': owner }">
+        <div>
+          <span v-if="isSystemMessage" class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">
+            {{ message.text }}
+          </span>
+          <span v-else class="px-4 py-2 rounded-lg inline-block rounded-bl-none" :class="{ 'bg-blue-600 text-white': owner, 'bg-gray-300 text-gray-600': !owner }">
+            {{ message.text }}
+          </span>
         </div>
       </div>
     </div>
-  </template>
+  </div>
+</template>
   
   <script>
   export default {
