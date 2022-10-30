@@ -6,10 +6,16 @@
           class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12"
         >
           <div class="md:5/12 lg:w-5/12">
-            <img
+            <!--<img
               fetchpriority="high"
               src="../static/placeholder650_550.webp"
               alt="image"
+              width="650px"
+              height="550px"
+            />-->
+            <nuxt-img
+              src="/placeholder650_550.webp"
+              alt="placeholder image"
               width="650px"
               height="550px"
             />

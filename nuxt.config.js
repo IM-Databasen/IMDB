@@ -34,6 +34,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     "@nuxt/typescript-build",
+    '@nuxt/image',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -48,5 +49,9 @@ export default {
 
   serverMiddleware: {
     '/api': '~/middleware/index.js',
+  },
+
+  image: {
+
   },
 };
