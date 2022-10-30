@@ -1,7 +1,11 @@
 <template>
   <nav class="bg-gray-100 flex flex-row items-center justify-between p-5 h-fit sm:h-20">
     <div class="flex flex-col items-center text-4xl font-extralight sm:flex-row">
-      <img src="../static/faviconV2.avif" alt="IMDB Logo" width="256px" height="256px" class="w-16 ml-5" />
+      <!-- <nuxt-img 
+        src="/faviconV2.avif" alt="IMDB Logo" 
+        :placeholder="[100, 50, 10]" 
+        quality="50"
+        sizes="sm:100vw md:200px lg:200px" class="ml-5" /> -->
       <h1 class="pl-5 sm:pl-0">
         IMDB
       </h1>
