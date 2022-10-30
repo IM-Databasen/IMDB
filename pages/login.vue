@@ -1,19 +1,12 @@
 <template>
-    <v-row
-      no-gutters
-      align="center"
-      justify="center"
-    >
-      <v-col cols="auto">
-        <v-card
-          min-width="290"
-          color="#424242"
-        >
+    <div style="display: flex; flex-direction: row; background: #000;">
+      <div style="display: flex; flex-direction: column;" cols="auto">
+        <div>
   
-          <v-card-title>
+          <div>
             <h2>Login</h2>
-          </v-card-title>
-          <v-card-text>
+          </div>
+          <div>
             <form
               ref="form"
               lazy-validation
@@ -37,10 +30,10 @@
                 Submit
           </button>
             </form>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
+          </div>
+        </div>
+      </div>
+    </div>
   </template>
   
   <script>

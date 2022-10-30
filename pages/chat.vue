@@ -64,40 +64,7 @@
   </script>
   
   <style scoped>
-  .chat-wrapper {
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .chat__form {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1rem;
-    height: 80px;
-  }
-  
-  .chat {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 80px;
-    padding: 1rem;
-    overflow-y: auto;
-    color: #000;
-  }
-  
-  .chat__typing {
-    position: absolute;
-    display: flex;
-    bottom: 50px;
-  }
-  
-  .chat__typing-user:not(first-child) {
-    margin-left: 15px;
-  }
+
+
   </style>
   

@@ -4,7 +4,6 @@ class UsersDB {
     }
   
     addUser(user) {
-        console.log('adduser', user)
       this.users = [...this.users, user];
     }
   

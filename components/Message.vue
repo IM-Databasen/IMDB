@@ -6,24 +6,24 @@
       >
         {{ message.text }}
       </p>
-      <v-col
+      <div style="display: flex; flex-direction: column;"
         v-else
         class="msg-wrapper"
       >
         <div style="display: flex; flex-direction: row"
           :class="{ owner }"
         >
-          <v-col>
+          <div style="display: flex; flex-direction: column;">
             <span class="font-weight-bold">{{ message.name }}</span>
             <p class="mb-0">
               {{ message.text }}
             </p>
-          </v-col>
-          <v-col cols="auto">
+          </div>
+          <div style="display: flex; flex-direction: column;" cols="auto">
             <span class="msg__date ml-3">{{ message.time }}</span>
-          </v-col>
+          </div>
         </div>
-      </v-col>
+      </div>
     </div>
   </template>
   
