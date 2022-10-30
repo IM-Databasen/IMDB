@@ -23,6 +23,10 @@
         class="py-2 px-3 m-1 rounded-md text-sm font-medium">
         Memes
       </nuxt-link>
+      <nuxt-link to="/chat" :class="String($nuxt.$route.path).startsWith('/chat') ? 'bg-gray-200' : 'hover:bg-gray-300'"
+        class="py-2 px-3 m-1 rounded-md text-sm font-medium">
+        Chat
+      </nuxt-link>
     </div>
   </nav>
 </template>

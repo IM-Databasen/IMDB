@@ -1,7 +1,8 @@
-export default {
+module.exports = {
   // Global page headers: https://go.nuxtjs.dev/config-head
   target: "static",
   ssr: true,
+
   head: {
     title: "IMDB",
     htmlAttrs: {
@@ -25,7 +26,7 @@ export default {
   css: ["./assets/css/main.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: "~/plugins/socket.client.js" }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -38,7 +39,11 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/http", "@nuxt/content"],
+  modules: [
+    "@nuxtjs/tailwindcss", 
+    "@nuxt/http", 
+    "@nuxt/content", 
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
@@ -48,13 +53,11 @@ export default {
   },
 
   serverMiddleware: {
-    "/api": "~/middleware/index.js",
+    "/api": "~/middleware/auth.js",
   },
 
   image: {
-    domains: [
-      'avatars.githubusercontent.com'
-    ],
+    domains: ["avatars.githubusercontent.com"],
     screens: {
       xs: 320,
       sm: 640,
