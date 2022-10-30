@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   target: "static",
-  ssr: false,
+  ssr: true,
   head: {
     title: "IMDB",
     htmlAttrs: {
@@ -48,7 +48,6 @@ export default {
   },
 
   serverMiddleware: {
-    '/_ipx': '~/server/middleware/ipx.js',
     '/api': '~/middleware/index.js',
   },
 
