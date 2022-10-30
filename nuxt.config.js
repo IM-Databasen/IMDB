@@ -34,7 +34,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     "@nuxt/typescript-build",
-    '@nuxt/image',
+    "@nuxt/image",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -48,10 +48,24 @@ export default {
   },
 
   serverMiddleware: {
-    '/api': '~/middleware/index.js',
+    "/api": "~/middleware/index.js",
   },
 
   image: {
-
+    domains: [
+      'avatars.githubusercontent.com'
+    ],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+      "2xl": 1536,
+    },
+    presets: {
+      avatar: { modifiers: { format: "webp", width: 600, height: 600 } },
+    },
   },
 };
