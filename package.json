@@ -3,24 +3,32 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "cross-env NODE_ENV=production node server/index.js",
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxt/content": "^1.15.1",
+    "@nuxt/content": "^2.2.1",
     "@nuxt/http": "^0.6.4",
     "core-js": "^3.25.3",
+    "cross-env": "^7.0.3",
+    "express": "^4.18.2",
+    "ipx": "^0.9.11",
     "nuxt": "^2.15.8",
+    "socket.io": "^4.5.3",
+    "socket.io-client": "^4.5.3",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
+    "vue-socket.io": "^3.0.10",
     "vue-template-compiler": "^2.7.10"
   },
   "devDependencies": {
+    "@nuxt/image": "^0.7.1",
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/tailwindcss": "^6.1.1",
+    "nodemon": "^2.0.20",
     "sass": "^1.55.0",
     "sass-loader": "^10.3.1"
   }

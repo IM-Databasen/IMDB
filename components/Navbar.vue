@@ -1,7 +1,7 @@
 <template>
   <nav class="bg-gray-100 flex flex-row items-center justify-between p-5 h-fit sm:h-20">
     <div class="flex flex-col items-center text-4xl font-extralight sm:flex-row">
-      <img src="../static/faviconV2.avif" alt="IMDB Logo" width="256px" height="256px" class="w-16 ml-5" />
+      <nuxt-img src="/faviconV2.png" preload format="webp" alt="IMDB Logo" width="256px" height="256px" class="w-16 ml-5" />
       <h1 class="pl-5 sm:pl-0">
         IMDB
       </h1>
@@ -22,6 +22,10 @@
       <nuxt-link to="/memes" :class="String($nuxt.$route.path).startsWith('/memes') ? 'bg-gray-200' : 'hover:bg-gray-300'"
         class="py-2 px-3 m-1 rounded-md text-sm font-medium">
         Memes
+      </nuxt-link>
+      <nuxt-link to="/chat" :class="String($nuxt.$route.path).startsWith('/chat') ? 'bg-gray-200' : 'hover:bg-gray-300'"
+        class="py-2 px-3 m-1 rounded-md text-sm font-medium">
+        Chat
       </nuxt-link>
     </div>
   </nav>

@@ -4,7 +4,13 @@
       <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
         <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
           <div class="md:5/12 lg:w-5/12">
-            <img src="../static/placeholder650_550.webp" alt="image" width="650px" height="550px">
+            <nuxt-img
+              loading="lazy" 
+              src="/placeholder650_550.webp"
+              alt="placeholder image"
+              sizes="sm:100vw md:200px lg:650px"
+              fit="cover"
+            />
           </div>
           <div class="md:7/12 lg:w-6/12">
             <h1 class="text-2xl text-gray-900 font-bold md:text-4xl">
@@ -51,8 +57,8 @@
         </div>
         <div class="grid gap-12 items-center md:grid-cols-2">
           <a v-for="(person, index) in people" :key="person.name + index" class="space-y-4 text-center" :href="person.giturl" target="_blank">
-            <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64" :src="person.image"
-              :alt="person.name" loading="lazy" width="640" height="667">
+            <nuxt-img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64" :src="person.image"
+              :alt="person.name" preload quality="50" preset="avatar" />
             <div>
               <p class="text-2xl">
                 {{ person.name }}
