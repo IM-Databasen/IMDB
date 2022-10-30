@@ -10,8 +10,8 @@
               preload   
               src="/placeholder650_550.webp"
               alt="placeholder image"
-              sizes="sm:100vw md:200px lg:650px"
-              fit="cover"
+              width="650px"
+              height="550px"
             />
           </div>
           <div class="md:7/12 lg:w-6/12">

@@ -18,6 +18,16 @@ import Message from "@/components/Message";
 import ChatForm from "@/components/ChatForm";
 
 export default {
+  head: {
+    title: "IMDB - Chat",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content: "Chat page",
+      },
+    ],
+  },
   name: "ChatPage",
   layout: "chat",
   components: {

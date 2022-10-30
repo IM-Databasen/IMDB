@@ -19,7 +19,6 @@
   
   <script>
   import { mapState, mapMutations, mapActions } from "vuex";
-  import Navbar from "@/components/Navbar";
   export default {
     name: "ChatLayout",
     computed: {

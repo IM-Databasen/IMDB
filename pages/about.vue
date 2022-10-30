@@ -2,14 +2,16 @@
   <div>
     <div class="py-16 bg-white">
       <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-        <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+        <div
+          class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12"
+        >
           <div class="md:5/12 lg:w-5/12">
             <nuxt-img
-              loading="lazy" 
+              preload
               src="/placeholder650_550.webp"
               alt="placeholder image"
-              sizes="sm:100vw md:200px lg:650px"
-              fit="cover"
+              width="650px"
+              height="550px"
             />
           </div>
           <div class="md:7/12 lg:w-6/12">
@@ -23,24 +25,54 @@
         </div>
       </div>
     </div>
-    
+
     <hr />
 
     <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0">
       <div class="container xl:max-w-6xl mx-auto px-4">
         <header class="text-center mx-auto mb-12 lg:px-20">
-          <h2 class="text-2xl leading-normal mb-2 font-bold text-black">Koffår bruka IMDB?</h2>
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-            y="0px" viewBox="0 0 100 60" style="margin: 0 auto;height: 35px;" xml:space="preserve">
-            <circle cx="50.1" cy="30.4" r="5" class="stroke-primary"
-              style="fill: transparent;stroke-width: 2;stroke-miterlimit: 10;"></circle>
-            <line x1="55.1" y1="30.4" x2="100" y2="30.4" class="stroke-primary"
-              style="stroke-width: 2;stroke-miterlimit: 10;"></line>
-            <line x1="45.1" y1="30.4" x2="0" y2="30.4" class="stroke-primary"
-              style="stroke-width: 2;stroke-miterlimit: 10;"></line>
+          <h2 class="text-2xl leading-normal mb-2 font-bold text-black">
+            Koffår bruka IMDB?
+          </h2>
+          <svg
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 100 60"
+            style="margin: 0 auto; height: 35px"
+            xml:space="preserve"
+          >
+            <circle
+              cx="50.1"
+              cy="30.4"
+              r="5"
+              class="stroke-primary"
+              style="fill: transparent; stroke-width: 2; stroke-miterlimit: 10"
+            ></circle>
+            <line
+              x1="55.1"
+              y1="30.4"
+              x2="100"
+              y2="30.4"
+              class="stroke-primary"
+              style="stroke-width: 2; stroke-miterlimit: 10"
+            ></line>
+            <line
+              x1="45.1"
+              y1="30.4"
+              x2="0"
+              y2="30.4"
+              class="stroke-primary"
+              style="stroke-width: 2; stroke-miterlimit: 10"
+            ></line>
           </svg>
-          <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">
-            Hør aldri "detta konne du gjort bedre" fra Odd Arne igjen med IMDB. Me har svarene på du trenge.
+          <p
+            class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2"
+          >
+            Hør aldri "detta konne du gjort bedre" fra Odd Arne igjen med IMDB.
+            Me har svarene på du trenge.
           </p>
         </header>
       </div>
@@ -51,14 +83,27 @@
     <div class="mt-6 py-20 bg-gray-50">
       <div class="container mx-auto px-6 md:px-12 xl:px-32">
         <div class="mb-16 text-center">
-          <h1 class="mb-4 text-center text-xl text-gray-900 font-bold md:text-xl">
-            IMDB blir utvikla og vedlikeholdt av: 
+          <h1
+            class="mb-4 text-center text-xl text-gray-900 font-bold md:text-xl"
+          >
+            IMDB blir utvikla og vedlikeholdt av:
           </h1>
         </div>
         <div class="grid gap-12 items-center md:grid-cols-2">
-          <a v-for="(person, index) in people" :key="person.name + index" class="space-y-4 text-center" :href="person.giturl" target="_blank">
-            <nuxt-img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64" :src="person.image"
-              :alt="person.name" preload quality="50" preset="avatar" />
+          <a
+            v-for="(person, index) in people"
+            :key="person.name + index"
+            class="space-y-4 text-center"
+            :href="person.giturl"
+            target="_blank"
+          >
+            <nuxt-img
+              loading="lazy"
+              class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
+              :src="person.image"
+              :alt="person.name"
+              preset="avatar"
+            />
             <div>
               <p class="text-2xl">
                 {{ person.name }}
@@ -113,8 +158,8 @@ export default {
           image: "https://avatars.githubusercontent.com/u/78083291?v=4",
           giturl: "https://github.com/Ahldroni",
         },
-      ]
-    }
-  }
+      ],
+    };
+  },
 };
 </script>
