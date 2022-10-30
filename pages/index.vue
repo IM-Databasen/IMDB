@@ -16,6 +16,7 @@
             <nuxt-img
               src="/placeholder650_550.webp"
               alt="placeholder image"
+              preload
               width="650px"
               height="550px"
             />
