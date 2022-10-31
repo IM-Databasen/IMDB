@@ -3,7 +3,13 @@
     <div
       class="w-full max-w-5xl p-5 pb-10 mx-auto mb-10 gap-5 columns-3 space-y-5"
     >
-      <nuxt-img preload v-for="meme in memes" :key="meme.pathShort" :src="meme.pathShort" :alt="meme.pathShort" />
+      <nuxt-img
+        preload
+        v-for="meme in memes"
+        :key="meme.pathShort"
+        :src="meme.pathLong"
+        :alt="meme.name"
+      />
     </div>
   </div>
 </template>
@@ -22,17 +28,26 @@ export default {
   },
   data() {
     return {
-      memes: []
-    }
-  },  
+      memes: [],
+    };
+  },
   mounted() {
-    this.importAll(require.context('../assets/memes/', true, /\.(jpe?g|png|webp|gif)$/i));
-  },  
+    this.importAll(
+      require.context("~/static/memes/", true, /\.(jpe?g|png|webp|gif|jpeg)$/i)
+    );
+  },
   methods: {
     importAll(r) {
-      r.keys().forEach(key => (this.memes.push({ pathLong: r(key), pathShort: key })));
+      // create a global regex pattern that replace ./ and jpg, jpeg, png and webp
+      r.keys().forEach((key) =>
+        this.memes.push({
+          name: key.replaceAll(/\.(\/|jpg|jpeg|png|webp|gif)/g, ""),
+          pathLong: r(key),
+          pathShort: key,
+        })
+      );
     },
-  }
+  },
 };
 </script>
 
