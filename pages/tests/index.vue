@@ -47,7 +47,7 @@ export default {
     }
   },
   async asyncData({ $content, $http }) {
-    const cards = await $content("tests").fetch();
+    const cards = await this.$content("tests").fetch();
 
     return { cards };
   },
