@@ -37,20 +37,20 @@ module.exports = {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     "@nuxt/typescript-build",
-    "@nuxt/image",
   ],
-
+  
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     "@nuxtjs/tailwindcss", 
     "@nuxt/http", 
     "@nuxt/content", 
+    "@nuxt/image",
     // "~/io" // socket io
   ],
 
-  env: {
-    WS_URL: 'https://im-databasen.netlify.app' || "http://localhost:3000",
-  },
+  // env: {
+  //   WS_URL: 'https://im-databasen.netlify.app' || "http://localhost:3000",
+  // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

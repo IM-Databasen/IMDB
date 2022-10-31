@@ -1,4 +1,4 @@
-import socket from '~/plugins/socket.io'
+// import socket from '~/plugins/socket.io'
 export const state = () => ({
     user: {},
     messages: [],
