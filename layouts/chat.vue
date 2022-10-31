@@ -32,6 +32,7 @@
       ...mapActions(["joinRoom", "leftRoom"]),
       exit() {
         this.leftRoom();
+        
         this.$router.push("/?message=leftChat");
       },
     },
