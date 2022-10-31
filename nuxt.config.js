@@ -49,7 +49,7 @@ module.exports = {
   ],
 
   env: {
-    WS_URL: process.env.WS_URL || "http://localhost:3000",
+    WS_URL: 'https://im-databasen.netlify.app/' || "http://localhost:3000",
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
