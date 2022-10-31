@@ -1,3 +1,4 @@
+import socket from '~/plugins/socket.io'
 export const state = () => ({
     user: {},
     messages: [],
@@ -31,7 +32,8 @@ export const state = () => ({
   
   export const actions = {
     socketEmit(_, { action, payload }) {
-      return this._vm.$socket.emit(action, payload);
+      // return this._vm.$socket.emit(action, payload);
+      return socket.emit(action, payload);
     },
     createMessage({ dispatch, state }, msg) {
       const { user } = state;

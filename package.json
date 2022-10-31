@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "NODE_ENV=production node server/server.js",
     "generate": "nuxt generate"
   },
   "dependencies": {

@@ -26,7 +26,9 @@ module.exports = {
   css: ["./assets/css/main.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  // plugins: [{ src: "~/plugins/socket.client.js" }],
+  plugins: [
+    // { src: "~/plugins/socket.client.js" }
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -43,7 +45,12 @@ module.exports = {
     "@nuxtjs/tailwindcss", 
     "@nuxt/http", 
     "@nuxt/content", 
+    "~/io" // socket io
   ],
+
+  env: {
+    WS_URL: process.env.WS_URL || "http://localhost:3000",
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
