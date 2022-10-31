@@ -1,7 +1,7 @@
 export default ({ app, store }, inject) => {
     inject("modal", {
-      showModal({ content = "" }) {
-        store.commit("modal/showModal", { content });
+      showModal({ content = "", header = "", image = "" }) {
+        store.commit("modal/showModal", { header, content, image });
       },
     });
   };

@@ -46,5 +46,9 @@ export default {
   name: "Index",
   transition: "slide-bottom",
   components: { Suggestions },
+  mounted() {
+    this.$modal.showModal({ header: "test", content: 'Du er ikke logget inn' })
+  }
 };
 </script>
+ 
