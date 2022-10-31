@@ -45,7 +45,7 @@ module.exports = {
     "@nuxtjs/tailwindcss", 
     "@nuxt/http", 
     "@nuxt/content", 
-    "~/io" // socket io
+    // "~/io" // socket io
   ],
 
   env: {
