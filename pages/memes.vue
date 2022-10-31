@@ -35,6 +35,12 @@ export default {
     this.importAll(
       require.context("~/static/memes/", true, /\.(jpe?g|png|webp|gif|jpeg)$/i)
     );
+    // this.$modal.showModal({
+    //   header: "Github Stats",
+    //   content: "Have you ever wondered why your github profile looks boring? No? Well, wonder no more! Devco has the solution for you! Stats for YOUR github profile! Customizable in all 10 millons colors! Buy now!",
+    //   image: "/memes/githubstatsAd.png",
+    //   link: "https://github.com/ArvidWedtstein/Github-Embed-Generator",
+    // });
   },
   methods: {
     importAll(r) {
