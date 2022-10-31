@@ -6,7 +6,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "NODE_ENV=production node server.js"
+    "generate": "NODE_ENV=production node server/server.js"
   },
   "dependencies": {
     "@nuxt/content": "^2.2.1",
