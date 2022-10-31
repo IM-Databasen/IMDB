@@ -14,34 +14,65 @@
       <div
         class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
       >
-        <div
-          class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg"
-        >
-          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-            <div class="sm:flex sm:items-start">
-              <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                <h3
-                  class="text-lg font-medium leading-6 text-gray-900"
-                  id="modal-title"
-                >
+        <div class="relative inset-x-0 p-4">
+          <div class="relative max-w-xl rounded-lg bg-gray-100 p-6 shadow-sm">
+            <button
+              type="button"
+              class="absolute -top-1 -right-1 rounded-full border border-gray-200 bg-white p-1 text-gray-400"
+            >
+              <span class="sr-only">Close</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-3 w-3"
+                viewBox="0 0 20 20"
+                role="button"
+                fill="currentColor"
+                @click="show = false"
+              >
+                <title @click="show = false">Close</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <img
+                v-if="image"
+                :alt="header"
+                :src="image"
+                class="h-full w-full rounded-xl object-cover"
+              />
+
+              <div class="">
+                <h2 class="text-lg font-medium">
                   {{ header }}
-                </h3>
-                <div class="mt-2">
-                  <p class="text-sm text-gray-500">
-                    {{ message }}
-                  </p>
+                </h2>
+
+                <p class="mt-4 text-sm text-gray-500">
+                  {{ message }}
+                </p>
+
+                <div class="absolute bottom-3 right-3 sm:text-right">
+                  <a 
+                    v-if="link"
+                    :href="link"
+                    class="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
+                  >
+                    Find out more
+                  </a>
+                  <button
+                    v-else
+                    @click="show = false"
+                    class="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
+                  >
+                    Ok
+                  </button>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-            <button
-              @click="show = false"
-              type="button"
-              class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-            >
-              Ok
-            </button>
           </div>
         </div>
       </div>
@@ -57,6 +88,7 @@ export default {
       header: "",
       message: "",
       image: "",
+      link: "",
     };
   },
   created() {
@@ -65,6 +97,7 @@ export default {
         this.header = state.modal.header;
         this.message = state.modal.content;
         this.image = state.modal.image;
+        this.link = state.modal.link;
         this.show = true;
       }
     });

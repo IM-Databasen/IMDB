@@ -2,6 +2,7 @@ export const state = () => ({
     header: "",
     content: "",
     image: "",
+    link: "",
   });
   
   export const mutations = {
@@ -9,6 +10,7 @@ export const state = () => ({
       state.header = payload.header;
       state.content = payload.content;
       state.image = payload.image;
+      state.link = payload.link;
     },
   };
   
