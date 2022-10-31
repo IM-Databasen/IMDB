@@ -1,6 +1,6 @@
 module.exports = {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  target: "server",
+  target: "static",
   ssr: true,
 
   head: {
@@ -54,6 +54,8 @@ module.exports = {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  // buildDir: "dist",
+
 
   generate: {
     fallback: true,
