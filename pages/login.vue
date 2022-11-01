@@ -63,7 +63,7 @@
 
 <script>
 import { mapActions } from "vuex";
-import messageDict from "@/lib/messageDict";
+import messageDict from "@/utils/messageDict";
 
 export default {
   name: "Home",
