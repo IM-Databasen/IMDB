@@ -80,7 +80,7 @@
 
     <hr />
 
-    <div class="mt-6 py-20 bg-gray-50">
+    <div class="my-12 py-20 bg-gray-50">
       <div class="container mx-auto px-6 md:px-12 xl:px-32">
         <div class="mb-16 text-center">
           <h1
@@ -113,6 +113,48 @@
               </span>
             </div>
           </a>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="py-16 bg-white">
+      <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+        <div
+          class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12"
+        >
+          <div class="md:7/12 lg:w-6/12">
+            <h1 class="text-2xl text-gray-900 font-bold md:text-4xl">
+              Litt om IM
+            </h1>
+            <p class="mt-6 text-gray-600">
+              Velger du å studere Informasjonsteknologi og Medieproduksjon (IM),
+              velger du en utdanning for fremtiden. 
+            </p>
+            <p class="mt-6 text-gray-600">
+              IT er ett av fagfeltene som
+              er i sterkest vekst, og det trengs mange flere fagarbeidere i
+              årene som kommer. IT-bedriftene uttrykker samtidig at de ønsker at
+              enda flere jenter søker IT-utdanninger. IM på Haugaland
+              videregående skole har tilgang til topp moderne IT-utstyr. Vi er
+              hele tiden i dialog med IT-bransjen over hva elevene skal ha av
+              IT-kunnskap når de begynner som IT-lærlinger. 
+            </p>
+            <p class="mt-6 text-gray-600">
+              Du trenger ikke å
+              kunne noe om IT fra før for å begynne på IM. Grunnleggende IT
+              lærer du på VG1. IT er et stort fagfelt og hos oss jobber våre
+              elever med alt innenfor IT-feltet, slikt som; design,
+              programmering, teknisk, servere, nettverk, nettsider, Cyber
+              Security, virtualisering, robotisering, for å nevne noe. På IM
+              etterligner vi en arbeidshverdag så godt vi kan. Hos oss skal det
+              føles som å komme på jobb der en får jobbe med sine interesser.
+              Våre elever jobber hele tiden med å sette seg inn i ny teknologi,
+              og nysgjerrighet, utforskning og problemløsing er sentralt i
+              hverdagen vår.
+            </p>
+          </div>
         </div>
       </div>
     </div>
