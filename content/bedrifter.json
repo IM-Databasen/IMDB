@@ -3,6 +3,7 @@
     {
       "Name": "Haugaland Kraft",
       "Description": "",
+      "Website": "",
       "Type": [
         "IT-Utvikling",
         "IT-Drift"
@@ -14,11 +15,12 @@
     {
       "Name": "Omega 365",
       "Description": "",
+      "Website": "https://omega365.no/",
       "Type": [
         "IT-Utvikling",
         "IT-Drift"
       ],
-      "Address": "",
+      "Address": "Norevegen 7, 5239 Haugesund",
       "ApprenticeCompany": true,
       "Technologies": [
         "Vue.js",
@@ -36,6 +38,7 @@
     {
       "Name": "Evry",
       "Description": "",
+      "Website": "",
       "Type": ["IT-Utvikling"],
       "Address": "",
       "ApprenticeCompany": true,
@@ -44,6 +47,7 @@
     {
       "Name": "Appex",
       "Description": "",
+      "Website": "",
       "Type": ["IT-Utvikling"],
       "Address": "",
       "ApprenticeCompany": false,
@@ -52,6 +56,7 @@
     {
       "Name": "Ølen Betong",
       "Description": "",
+      "Website": "",
       "Type": ["IT-Drift"],
       "Address": "",
       "ApprenticeCompany": true,
