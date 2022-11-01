@@ -1,0 +1,17 @@
+<xml>  
+    <tema prop="pacman">    
+        <title>Pacman</title>    
+        <description>Lær deg djikstras algoritme og lag pacman i visual basic!</description>  
+        <categories>
+            <category>VB.Net</category>
+        </categories>
+    </tema>
+    <tema prop="socketio">    
+        <title>Socket.io chat nettside</title>    
+        <description>Hello World</description>  
+        <categories>
+            <category>Web</category>
+            <category>Node.js</category>
+        </categories>
+    </tema>
+</xml>

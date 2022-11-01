@@ -27,6 +27,10 @@
         class="py-2 px-3 m-1 rounded-md text-sm font-medium">
         Chat
       </nuxt-link>
+      <nuxt-link to="/fordypning" :class="String($nuxt.$route.path).startsWith('/fordypning') ? 'bg-gray-200' : 'hover:bg-gray-300'"
+        class="py-2 px-3 m-1 rounded-md text-sm font-medium">
+        Fordypning
+      </nuxt-link>
     </div>
   </nav>
 </template>
