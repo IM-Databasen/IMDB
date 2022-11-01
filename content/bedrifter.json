@@ -2,6 +2,7 @@
   "bedrifter": [
     {
       "Name": "Haugaland Kraft",
+      "Description": "",
       "Type": [
         "IT-Utvikling",
         "IT-Drift"
@@ -12,6 +13,7 @@
     },
     {
       "Name": "Omega 365",
+      "Description": "",
       "Type": [
         "IT-Utvikling",
         "IT-Drift"
@@ -33,6 +35,7 @@
     },
     {
       "Name": "Evry",
+      "Description": "",
       "Type": ["IT-Utvikling"],
       "Address": "",
       "ApprenticeCompany": true,
@@ -40,6 +43,7 @@
     },
     {
       "Name": "Appex",
+      "Description": "",
       "Type": ["IT-Utvikling"],
       "Address": "",
       "ApprenticeCompany": false,
@@ -47,6 +51,7 @@
     }, 
     {
       "Name": "Ølen Betong",
+      "Description": "",
       "Type": ["IT-Drift"],
       "Address": "",
       "ApprenticeCompany": true,
