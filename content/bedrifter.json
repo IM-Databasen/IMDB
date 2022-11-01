@@ -2,12 +2,20 @@
   "bedrifter": [
     {
       "Name": "Haugaland Kraft",
+      "Type": [
+        "IT-Utvikling",
+        "IT-Drift"
+      ],
       "Address": "",
       "ApprenticeCompany": true,
-      "Technologies": ["Nuxt.js", "React Native"]
+      "Technologies": ["Nuxt.js", "React Native", "Tailwind CSS"]
     },
     {
       "Name": "Omega 365",
+      "Type": [
+        "IT-Utvikling",
+        "IT-Drift"
+      ],
       "Address": "",
       "ApprenticeCompany": true,
       "Technologies": [
@@ -22,6 +30,20 @@
         "CSS",
         "Bootstrap"
       ]
+    },
+    {
+      "Name": "Evry",
+      "Type": ["IT-Utvikling"],
+      "Address": "",
+      "ApprenticeCompany": true,
+      "Technologies": []
+    },
+    {
+      "Name": "Appex",
+      "Type": ["IT-Utvikling"],
+      "Address": "",
+      "ApprenticeCompany": false,
+      "Technologies": ["Nuxt.js", "C#", "Azure", "Tailwind CSS"]
     }
   ]
 }
