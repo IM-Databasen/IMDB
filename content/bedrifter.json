@@ -1,0 +1,27 @@
+{
+  "bedrifter": [
+    {
+      "Name": "Haugaland Kraft",
+      "Address": "",
+      "ApprenticeCompany": true,
+      "Technologies": ["Nuxt.js", "React Native"]
+    },
+    {
+      "Name": "Omega 365",
+      "Address": "",
+      "ApprenticeCompany": true,
+      "Technologies": [
+        "Vue.js",
+        "Appframe",
+        "VB.NET",
+        "C#",
+        "T-SQL",
+        "SQL Server",
+        "Javascript",
+        "HTML",
+        "CSS",
+        "Bootstrap"
+      ]
+    }
+  ]
+}
