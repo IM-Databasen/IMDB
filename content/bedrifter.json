@@ -44,6 +44,13 @@
       "Address": "",
       "ApprenticeCompany": false,
       "Technologies": ["Nuxt.js", "C#", "Azure", "Tailwind CSS"]
+    }, 
+    {
+      "Name": "Ølen Betong",
+      "Type": ["IT-Drift"],
+      "Address": "",
+      "ApprenticeCompany": true,
+      "Technologies": ["SQL Server", "React.js", "T-SQL", "VB.NET", "Javascript", "HTML", "CSS"]
     }
   ]
 }
