@@ -37,24 +37,38 @@
     </form>
     <div class="grid grid-cols-2">
       <div
-        v-for="i in 6"
+        v-for="(company, index) in filteredCompanies"
         class="group flex flex-col m-5 shadow-xl bg-white leading-snug overflow-hidden rounded odd:lg:flex-row even:lg:flex-row-reverse lg:max-w-screen-md"
       >
         <div class="relative h-52 lg:h-auto lg:basis-2/5 meta">
           <div
-            class="absolute top-0 bottom-0 left-0 right-0 bg-cover bg-center transition-transform bg-[url('https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg')] group-hover:rotate-[3deg] group-hover:scale-[1.2]"
+            v-if="company.image"
+            class="absolute top-0 bottom-0 left-0 right-0 bg-cover bg-center transition-transform group-hover:rotate-[3deg] group-hover:scale-[1.2]"
+            :style="{ 'background-image': 'url(' + company.image + ')' }"
+          ></div>
+          <div
+            v-else
+            class="absolute top-0 bottom-0 left-0 right-0 bg-cover bg-center transition-transform group-hover:rotate-[3deg] group-hover:scale-[1.2] bg-[url('https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg')]"
           ></div>
           <ul
-            class="m-auto list-style-none absolute top-0 bottom-0 -left-full w-full p-[10px] bg-black bg-opacity-60 text-white text-sm transition-[left] group-[.alt]:pl-6 group-hover:left-0"
+            class="flex flex-col list-style-none absolute top-0 bottom-0 -left-full w-full p-[10px] bg-black bg-opacity-60 text-white text-sm transition-[left] group-[.alt]:pl-6 group-hover:left-0"
           >
-            <li class="inline-block before:mr-2.5"><a href="#">John Doe</a></li>
-            <li class="inline-block before:mr-2.5">Aug. 24, 2015</li>
-            <li class="inline-block">
-              <ul class="before:mr-2.5 first:-ml-1">
-                <li class="inline-block mr-0.5"><a href="#">Learn</a></li>
-                <li class="inline-block mr-0.5"><a href="#">Code</a></li>
+            <li class="inline-block before:mr-2.5">
+              Tar lærlinger: {{ company.apprenticeCompany ? "Ja" : "Nei" }}
+            </li>
+            <li v-if="company.technologies.length > 0" class="inline-block before:mr-2.5">
+              <ul class="inline-block">
+                <li class="text-sm font-bold">Teknologier:</li>
+                <li
+                  v-for="(technology, tindex) in company.technologies.slice(0,5)"
+                  :key="tindex"
+                  class="mr-0.5"
+                >
+                  <a href="#">{{ technology }}</a>
+                </li>
+                <!-- <li class="inline-block mr-0.5"><a href="#">Code</a></li>
                 <li class="inline-block mr-0.5"><a href="#">HTML</a></li>
-                <li class="inline-block mr-0.5"><a href="#">CSS</a></li>
+                <li class="inline-block mr-0.5"><a href="#">CSS</a></li> -->
               </ul>
             </li>
           </ul>
@@ -62,71 +76,33 @@
         <div
           class="relative bg-white p-4 z-10 lg:basis-3/5 lg:before:-skew-x-3 lg:before:bg-white lg:before:w-7 lg:before:absolute lg:before:-left-2.5 lg:before:z-10 group-[.alt]:before:-right-2.5 before:group-[.alt]:left-[inherit] before:group-[.alt]:skew-x-3"
         >
-          <h1 class="leading-none m-0 text-2xl">Learning to Code</h1>
+          <h1 class="leading-none m-0 text-2xl">{{ company.name }}</h1>
           <h2 class="text-base font-light uppercase mt-1.5 text-[#a2a2a2]">
-            Opening a door to the future
+            {{ company.slogan || ":-)" }}
           </h2>
+          <div class="relative flex flex-row mt-2">
+            <span
+              v-for="(type, typeindex) in company.type"
+              :key="typeindex + type"
+              class="bg-gray-100 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"
+              >{{ type }}</span
+            >
+          </div>
           <p
             class="relative mt-4 first-of-type:mt-5 before:absolute before:h-1 before:w-9 before:bg-[#5ad67d] before:-top-3 before:rounded"
           >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum
-            dolorum architecto obcaecati enim dicta praesentium, quam nobis!
-            Neque ad aliquam facilis numquam. Veritatis, sit.
+            {{ company.description }}
           </p>
           <p class="relative mt-4 text-right first-of-type:mt-5 read-more">
             <a
               class="underline decoration-dotted text-[#5ad67d] inline-block relative after:content-['👉'] after:ml-2.5 after:align-middle after:opacity-0 after:transition-[margin,opacity] hover:after:opacity-100 hover:after:ml-1.5"
-              href="#"
+              :href="company.website"
+              target="_blank"
               >Read More</a
             >
           </p>
         </div>
       </div>
-      <!-- <div
-        v-for="i in 6"
-        class="group flex flex-col m-5 shadow-xl bg-white leading-snug overflow-hidden rounded lg:max-w-screen-md lg:flex-row-reverse alt"
-      >
-        <div class="relative h-52 lg:h-auto lg:basis-2/5 meta">
-          <div
-            class="absolute top-0 bottom-0 left-0 right-0 bg-cover bg-center transition-transform bg-[url('https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg')] group-hover:rotate-[3deg] group-hover:scale-[1.2]"
-          ></div>
-          <ul
-            class="m-auto list-style-none absolute top-0 bottom-0 -left-full w-full p-[10px] bg-black bg-opacity-60 text-white text-sm transition-[left] group-[.alt]:pl-6 group-hover:left-0"
-          >
-            <li class="inline-block before:mr-2.5"><a href="#">Jane Doe</a></li>
-            <li class="inline-block before:mr-2.5">July. 15, 2015</li>
-            <li class="inline-block">
-              <ul class="before:mr-2.5 first:-ml-1">
-                <li class="inline-block mr-0.5"><a href="#">Learn</a></li>
-                <li class="inline-block mr-0.5"><a href="#">Code</a></li>
-                <li class="inline-block mr-0.5"><a href="#">JavaScript</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="relative bg-white p-4 z-10 lg:basis-3/5 lg:before:-skew-x-3 lg:before:bg-white lg:before:w-7 lg:before:absolute lg:before:-left-2.5 lg:before:z-10 before:group-[.alt]:-right-2.5 group-[.alt]:before:left-[inherit] before:group-[.alt]:skew-x-3"
-        >
-          <h1 class="leading-none m-0 text-2xl">Mastering the Language</h1>
-          <h2 class="text-base font-light uppercase mt-1.5 text-[#a2a2a2]">
-            Java is not the same as JavaScript
-          </h2>
-          <p
-            class="relative mt-4 first-of-type:mt-5 before:absolute before:h-1 before:w-9 before:bg-[#5ad67d] before:-top-3 before:rounded"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum
-            dolorum architecto obcaecati enim dicta praesentium, quam nobis!
-            Neque ad aliquam facilis numquam. Veritatis, sit.
-          </p>
-          <p class="relative mt-4 first-of-type:mt-5 text-right read-more">
-            <a
-              class="underline decoration-dotted text-[#5ad67d] inline-block relative after:content-['👉'] after:ml-2.5 after:align-middle after:opacity-0 after:transition-[margin,opacity] hover:after:opacity-100 hover:after:ml-1.5"
-              href="#"
-              >Read More</a
-            >
-          </p>
-        </div>
-      </div> -->
     </div>
   </div>
 </template>
@@ -150,10 +126,10 @@ export default {
   },
   async asyncData({ $content, $http }) {
     const companies = await $content("bedrifter").fetch();
-    return { companies: companies };
+    return { companies: companies.companies };
   },
   computed: {
-    filteredTemaer() {
+    filteredCompanies() {
       return this.companies.filter((company) =>
         company.name.toLowerCase().includes(this.search.toLowerCase())
       );

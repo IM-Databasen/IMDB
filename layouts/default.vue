@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="transform-gpu">
     <Navbar />
     <Snackbar />
     <Modal />

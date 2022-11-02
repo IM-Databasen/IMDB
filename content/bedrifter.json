@@ -1,28 +1,26 @@
 {
-  "bedrifter": [
+  "companies": [
     {
-      "Name": "Haugaland Kraft",
-      "Description": "",
-      "Website": "",
-      "Type": [
-        "IT-Utvikling",
-        "IT-Drift"
-      ],
-      "Address": "",
-      "ApprenticeCompany": true,
-      "Technologies": ["Nuxt.js", "React Native", "Tailwind CSS"]
+      "name": "Haugaland Kraft",
+      "description": "",
+      "slogan": "",
+      "website": "",
+      "image": "",
+      "type": ["IT-Utvikling", "IT-Drift"],
+      "address": "",
+      "apprenticeCompany": true,
+      "technologies": ["Nuxt.js", "React Native", "Tailwind CSS"]
     },
     {
-      "Name": "Omega 365",
-      "Description": "",
-      "Website": "https://omega365.no/",
-      "Type": [
-        "IT-Utvikling",
-        "IT-Drift"
-      ],
-      "Address": "Norevegen 7, 5239 Haugesund",
-      "ApprenticeCompany": true,
-      "Technologies": [
+      "name": "Omega 365",
+      "description": "Omega holder på med SQL Server.",
+      "slogan": "Big enough to deliver - small enough to care",
+      "website": "https://omega365.no/",
+      "image": "",
+      "type": ["IT-Utvikling", "IT-Drift"],
+      "address": "Norevegen 7, 5239 Haugesund",
+      "apprenticeCompany": true,
+      "technologies": [
         "Vue.js",
         "Appframe",
         "VB.NET",
@@ -36,31 +34,45 @@
       ]
     },
     {
-      "Name": "Evry",
-      "Description": "",
-      "Website": "",
-      "Type": ["IT-Utvikling"],
-      "Address": "",
-      "ApprenticeCompany": true,
-      "Technologies": []
+      "name": "Evry",
+      "description": "",
+      "slogan": "",
+      "website": "",
+      "image": "",
+      "type": ["IT-Utvikling"],
+      "address": "",
+      "apprenticeCompany": true,
+      "technologies": []
     },
     {
-      "Name": "Appex",
-      "Description": "",
-      "Website": "",
-      "Type": ["IT-Utvikling"],
-      "Address": "",
-      "ApprenticeCompany": false,
-      "Technologies": ["Nuxt.js", "C#", "Azure", "Tailwind CSS"]
-    }, 
+      "name": "Appex",
+      "description": "",
+      "slogan": "Lidenskap for design og teknologi!",
+      "website": "https://appex.no/om-appex/",
+      "image": "https://appexno.imgix.net/2021/12/Appex_lokaler_200342-scaled.jpg?auto=format&crop=faces&fit=crop&ixlib=php-2.1.1&q=90&w=1500",
+      "type": ["IT-Utvikling"],
+      "address": "",
+      "apprenticeCompany": false,
+      "technologies": ["Nuxt.js", "C#", "Azure", "Tailwind CSS"]
+    },
     {
-      "Name": "Ølen Betong",
-      "Description": "",
-      "Website": "",
-      "Type": ["IT-Drift"],
-      "Address": "",
-      "ApprenticeCompany": true,
-      "Technologies": ["SQL Server", "React.js", "T-SQL", "VB.NET", "Javascript", "HTML", "CSS"]
+      "name": "Ølen Betong",
+      "description": "Holder på med SQL server, Flutter. ",
+      "slogan": "",
+      "website": "",
+      "image": "",
+      "type": ["IT-Drift"],
+      "address": "",
+      "apprenticeCompany": true,
+      "technologies": [
+        "SQL Server",
+        "React.js",
+        "T-SQL",
+        "VB.NET",
+        "Javascript",
+        "HTML",
+        "CSS"
+      ]
     }
   ]
 }

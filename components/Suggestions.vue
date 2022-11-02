@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form class="bg-gray-300 shadow text-white rounded-2xl p-5 mx-2">
+    <form class="bg-gray-200 shadow border-gray-300 border text-white rounded-2xl p-5 mx-2">
       <h1 class="text-xl font-bold mb-3 text-gray-900">Har du ett forslag?</h1>
       <label
         for="default-search"
@@ -12,7 +12,7 @@
           type="search"
           v-model="search"
           id="default-search"
-          class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Ditt forslag..."
           rows="8"
         >
