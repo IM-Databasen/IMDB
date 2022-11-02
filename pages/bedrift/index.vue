@@ -98,7 +98,7 @@
               class="underline decoration-dotted text-[#5ad67d] inline-block relative after:content-['👉'] after:ml-2.5 after:align-middle after:opacity-0 after:transition-[margin,opacity] hover:after:opacity-100 hover:after:ml-1.5"
               :href="company.website"
               target="_blank"
-              >Read More</a
+              >Les mer</a
             >
           </p>
         </div>

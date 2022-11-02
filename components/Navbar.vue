@@ -31,6 +31,10 @@
         class="py-2 px-3 m-1 rounded-md text-sm font-medium">
         Fordypning
       </nuxt-link>
+      <nuxt-link to="/bedrift" :class="String($nuxt.$route.path).startsWith('/bedrift') ? 'bg-gray-200' : 'hover:bg-gray-300'"
+        class="py-2 px-3 m-1 rounded-md text-sm font-medium">
+        Bedrifter
+      </nuxt-link>
     </div>
   </nav>
   <!-- <nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
