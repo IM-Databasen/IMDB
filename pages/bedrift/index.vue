@@ -66,9 +66,6 @@
                 >
                   <a href="#">{{ technology }}</a>
                 </li>
-                <!-- <li class="inline-block mr-0.5"><a href="#">Code</a></li>
-                <li class="inline-block mr-0.5"><a href="#">HTML</a></li>
-                <li class="inline-block mr-0.5"><a href="#">CSS</a></li> -->
               </ul>
             </li>
           </ul>
