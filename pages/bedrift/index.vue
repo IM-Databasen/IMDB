@@ -73,7 +73,7 @@
         <div
           class="relative bg-white p-4 z-10 lg:basis-3/5 lg:before:-skew-x-3 lg:before:bg-white lg:before:w-7 lg:before:absolute lg:before:-left-2.5 lg:before:z-10 group-[.alt]:before:-right-2.5 before:group-[.alt]:left-[inherit] before:group-[.alt]:skew-x-3"
         >
-          <h1 class="leading-none m-0 text-2xl">{{ company.name }}</h1>
+          <a :href="company.website" target="_blank" class="leading-none m-0 text-2xl">{{ company.name }}</a>
           <h2 class="text-base font-light uppercase mt-1.5 text-[#a2a2a2]">
             {{ company.slogan || ":-)" }}
           </h2>
@@ -93,8 +93,7 @@
           <p class="relative mt-4 text-right first-of-type:mt-5 read-more">
             <a
               class="underline decoration-dotted text-[#5ad67d] inline-block relative after:content-['👉'] after:ml-2.5 after:align-middle after:opacity-0 after:transition-[margin,opacity] hover:after:opacity-100 hover:after:ml-1.5"
-              :href="company.website"
-              target="_blank"
+              :href="'/bedrift/' + company.name"
               >Les mer</a
             >
           </p>
