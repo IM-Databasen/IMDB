@@ -20,7 +20,7 @@
       </div>
       <button
         type="submit"
-        class="rounded py-2 px-4 text-center text-light mt-3 bg-gray-500 hover:bg-gray-400"
+        class="rounded py-2 px-4 text-center text-light mt-3 bg-imdb_gray-700 hover:bg-imdb_gray-600"
       >
         Send Inn
       </button>

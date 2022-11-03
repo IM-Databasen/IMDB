@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="py-16 bg-white">
-      <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+    <div class="py-16 text-imdb_white">
+      <div class="container m-auto px-6  md:px-12 xl:px-6">
         <div
           class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12"
         >
@@ -15,10 +15,10 @@
             />
           </div>
           <div class="md:7/12 lg:w-6/12">
-            <h1 class="text-2xl text-gray-900 font-bold md:text-4xl">
+            <h1 class="text-2xl  font-bold md:text-4xl">
               IMDB - Få svarene te dine prøver
             </h1>
-            <p class="mt-6 text-gray-600">
+            <p class="mt-6 ">
               Sorry, svar på prøver er ikke tilgjengelig enda.
             </p>
           </div>
@@ -28,10 +28,10 @@
 
     <hr />
 
-    <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0">
+    <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0 text-imdb_white  ">
       <div class="container xl:max-w-6xl mx-auto px-4">
         <header class="text-center mx-auto mb-12 lg:px-20">
-          <h2 class="text-2xl leading-normal mb-2 font-bold text-black">
+          <h2 class="text-2xl leading-normal mb-2 font-bold">
             Koffår bruka IMDB?
           </h2>
           <svg
@@ -69,7 +69,7 @@
             ></line>
           </svg>
           <p
-            class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2"
+            class=" leading-relaxed font-light text-xl mx-auto pb-2"
           >
             Hør aldri "detta konne du gjort bedre" fra Odd Arne igjen med IMDB.
             Me har svarene på du trenge.
@@ -80,11 +80,11 @@
 
     <hr />
 
-    <div class="my-12 py-20 bg-gray-50">
+    <div class="my-12 py-8  text-imdb_gray-900 bg-imdb_olive_500 rounded-xl">
       <div class="container mx-auto px-6 md:px-12 xl:px-32">
         <div class="mb-16 text-center">
           <h1
-            class="mb-4 text-center text-xl text-gray-900 font-bold md:text-xl"
+            class="mb-4 text-center text-xl  font-bold md:text-xl"
           >
             IMDB blir utvikla og vedlikeholdt av:
           </h1>
@@ -108,7 +108,7 @@
               <p class="text-2xl">
                 {{ person.name }}
               </p>
-              <span class="block text-sm text-gray-500">
+              <span class="block text-sm ">
                 {{ person.title }}
               </span>
             </div>
@@ -119,20 +119,20 @@
 
     <hr />
 
-    <div class="py-16 bg-white">
-      <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+    <div class="py-16 text-imdb_white text-center">
+      <div class="container m-auto px-6 md:px-12 xl:px-6">
         <div
-          class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12"
+          class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center content-center justify-items-center place-content-center"
         >
-          <div class="md:7/12 lg:w-6/12">
-            <h1 class="text-2xl text-gray-900 font-bold md:text-4xl">
+          <div class="self-center md:7/12 lg:w-6/12">
+            <h1 class="text-2xl font-bold md:text-4xl">
               Litt om IM
             </h1>
-            <p class="mt-6 text-gray-600">
+            <p class="mt-6 ">
               Velger du å studere Informasjonsteknologi og Medieproduksjon (IM),
               velger du en utdanning for fremtiden. 
             </p>
-            <p class="mt-6 text-gray-600">
+            <p class="mt-6">
               IT er ett av fagfeltene som
               er i sterkest vekst, og det trengs mange flere fagarbeidere i
               årene som kommer. IT-bedriftene uttrykker samtidig at de ønsker at
@@ -141,7 +141,7 @@
               hele tiden i dialog med IT-bransjen over hva elevene skal ha av
               IT-kunnskap når de begynner som IT-lærlinger. 
             </p>
-            <p class="mt-6 text-gray-600">
+            <p class="mt-6">
               Du trenger ikke å
               kunne noe om IT fra før for å begynne på IM. Grunnleggende IT
               lærer du på VG1. IT er et stort fagfelt og hos oss jobber våre

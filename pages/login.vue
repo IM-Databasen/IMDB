@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="text-imdb_white">
     <div class="text-center mt-24">
       <div class="flex items-center justify-center">
         <svg
@@ -19,7 +19,7 @@
       <h2 class="text-4xl tracking-tight">Enter name And Room</h2>
     </div>
     <div class="flex justify-center my-2 mx-4 md:mx-0">
-      <form ref="form" @submit.prevent="submit" class="w-full max-w-xl bg-white rounded-lg shadow-md p-6">
+      <form ref="form" @submit.prevent="submit" class="w-full max-w-xl bg-imdb_text_tertiary rounded-lg shadow-md p-6">
         <div class="flex flex-wrap -mx-3 mb-6">
           <div class="w-full md:w-full px-3 mb-6">
             <label
@@ -66,7 +66,7 @@ import { mapActions } from "vuex";
 import messageDict from "@/utils/messageDict";
 
 export default {
-  name: "Home",
+  name: "Login",
   layout: "login",
   data: () => ({
     isValid: true,
@@ -106,7 +106,7 @@ export default {
   },
 
   head: {
-    title: "nuxt-chat-app",
+    title: "Login",
   },
 };
 </script>

@@ -1,39 +1,39 @@
 <template>
-  <nav class="bg-gray-100 flex flex-row items-center justify-between p-5 h-fit sm:h-20 border-b-2 border-gray-500">
-    <div class="flex flex-col items-center text-4xl font-extralight sm:flex-row">
+  <nav class="flex flex-row items-center justify-between p-5 h-fit sm:h-20 border-b-2 df">
+    <div class="flex flex-col items-center text-imdb_white text-4xl font-extralight sm:flex-row">
       <nuxt-img src="/faviconV2.png" preload format="webp" alt="IMDB Logo" width="256px" height="256px" class="w-16 ml-5" />
-      <h1 class="pl-5 sm:pl-0">
+      <h1 class="pl-5 sm:pl-0 text-imdb_white">
         IMDB
       </h1>
     </div>
-    <div class="flex flex-col sm:flex-row sm:ml-6">
-      <nuxt-link to="/" :class="String($nuxt.$route.path) == '/' ? 'bg-gray-200' : 'hover:bg-gray-300'"
-        class="py-2 px-3 m-1 rounded-md text-sm font-medium">
+    <div class="flex flex-col sm:flex-row sm:ml-6 border-b-2 border-imdb_gray-600">
+      <nuxt-link to="/" :class="String($nuxt.$route.path) == '/' ? 'border-imdb_text_primary text-imdb_gray-100' : 'border-transparent text-imdb_text_tertiary hover:text-imdb_gray-100'"
+        class="py-2 px-3 m-1 rounded-md text-sm font-medium border-t-2">
         Him
       </nuxt-link>
-      <nuxt-link to="/about" :class="String($nuxt.$route.path) == '/about' ? 'bg-gray-200' : 'hover:bg-gray-300'"
-        class="py-2 px-3 m-1 rounded-md text-sm font-medium">
+      <nuxt-link to="/about" :class="String($nuxt.$route.path) == '/about' ? 'border-imdb_text_primary text-imdb_gray-100' : 'border-transparent text-imdb_text_tertiary hover:text-imdb_gray-100'"
+        class="py-2 px-3 m-1 rounded-md text-sm font-medium border-t-2">
         Ka e IMDB?
       </nuxt-link>
-      <nuxt-link to="/tests" :class="String($nuxt.$route.path).startsWith('/tests') ? 'bg-gray-200' : 'hover:bg-gray-300'"
-        class="py-2 px-3 m-1 rounded-md text-sm font-medium">
-        Prøver
+      <nuxt-link to="/tests" :class="String($nuxt.$route.path).startsWith('/tests') ? 'border-imdb_text_primary text-imdb_gray-100' : 'border-transparent text-imdb_text_tertiary hover:text-imdb_gray-100'"
+        class="py-2 px-3 m-1 rounded-md text-sm font-medium border-t-2">
+        Prøvar
       </nuxt-link>
-      <nuxt-link to="/memes" :class="String($nuxt.$route.path).startsWith('/memes') ? 'bg-gray-200' : 'hover:bg-gray-300'"
-        class="py-2 px-3 m-1 rounded-md text-sm font-medium">
+      <nuxt-link to="/memes" :class="String($nuxt.$route.path).startsWith('/memes') ? 'border-imdb_text_primary text-imdb_gray-100' : 'border-transparent text-imdb_text_tertiary hover:text-imdb_gray-100'"
+        class="py-2 px-3 m-1 rounded-md text-sm font-medium border-t-2">
         Memes
       </nuxt-link>
-      <nuxt-link to="/chat" :class="String($nuxt.$route.path).startsWith('/chat') ? 'bg-gray-200' : 'hover:bg-gray-300'"
-        class="py-2 px-3 m-1 rounded-md text-sm font-medium">
+      <nuxt-link to="/chat" :class="String($nuxt.$route.path).startsWith('/chat') ? 'border-imdb_text_primary text-imdb_gray-100' : 'border-transparent text-imdb_text_tertiary hover:text-imdb_gray-100'"
+        class="py-2 px-3 m-1 rounded-md text-sm font-medium border-t-2">
         Chat
       </nuxt-link>
-      <nuxt-link to="/fordypning" :class="String($nuxt.$route.path).startsWith('/fordypning') ? 'bg-gray-200' : 'hover:bg-gray-300'"
-        class="py-2 px-3 m-1 rounded-md text-sm font-medium">
+      <nuxt-link to="/fordypning" :class="String($nuxt.$route.path).startsWith('/fordypning') ? 'border-imdb_text_primary text-imdb_gray-100' : 'border-transparent text-imdb_text_tertiary hover:text-imdb_gray-100'"
+        class="py-2 px-3 m-1 rounded-md text-sm font-medium border-t-2">
         Fordypning
       </nuxt-link>
-      <nuxt-link to="/bedrift" :class="String($nuxt.$route.path).startsWith('/bedrift') ? 'bg-gray-200' : 'hover:bg-gray-300'"
-        class="py-2 px-3 m-1 rounded-md text-sm font-medium">
-        Bedrifter
+      <nuxt-link to="/bedrift" :class="String($nuxt.$route.path).startsWith('/bedrift') ? 'border-imdb_text_primary text-imdb_gray-100' : 'border-transparent text-imdb_text_tertiary hover:text-imdb_gray-100'"
+        class="py-2 px-3 m-1 rounded-md text-sm font-medium border-t-2">
+        Bedriftar
       </nuxt-link>
     </div>
   </nav>
@@ -152,4 +152,9 @@ export default {
 };
 </script>
 
-<style scoped></style>
+
+<style scoped>
+.df {
+  box-shadow: 0 4vmin #0b0b0b, -2vmin 5vmin 4vmin #0a0a0a;
+}
+</style>
