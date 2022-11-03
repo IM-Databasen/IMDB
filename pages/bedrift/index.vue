@@ -73,7 +73,7 @@
         <div
           class="relative bg-imdb_white p-4 z-10 lg:basis-3/5 lg:before:-skew-x-3 lg:before:bg-imdb_white lg:before:w-7 lg:before:absolute lg:before:-left-2.5 lg:before:z-10 group-[.alt]:before:-right-2.5 before:group-[.alt]:left-[inherit] before:group-[.alt]:skew-x-3"
         >
-          <a :href="company.website" target="_blank" class="leading-none m-0 text-2xl">{{ company.name }}</a>
+          <a :href="company.website" target="_blank" class="leading-none m-0 text-2xl text-imdb_gray-900">{{ company.name }}</a>
           <h2 class="text-base font-light uppercase mt-1.5 text-imdb_text_tertiary">
             {{ company.slogan || ":-)" }}
           </h2>
