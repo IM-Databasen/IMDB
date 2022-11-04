@@ -1,9 +1,9 @@
 <template>
-  <div class="transform-gpu bg-imdb_gray-800">
+  <div class="transform-gpu bg-white">
     <Navbar />
     <Snackbar />
     <Modal />
-    <Nuxt class="overflow-hidden py-10 px-5 sm:px-10 lg:px-36 2xl:px-48 bg-imdb_gray-800 " />
+    <Nuxt class="overflow-hidden py-10 px-5 sm:px-10 lg:px-36 2xl:px-48 bg-white " />
   </div>
 </template>
 
@@ -40,7 +40,7 @@ $c-text-primary: $c-gray-100;
 $c-text-secondary: $c-gray-200;
 $c-text-tertiary: $c-gray-500;
 body, html {
-  background-color: #1f1f1f;
+  background-color: #fff;
 }
 
 </style>

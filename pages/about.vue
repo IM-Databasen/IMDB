@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="py-16 text-imdb_white">
+    <div class="py-16 text-black">
       <div class="container m-auto px-6  md:px-12 xl:px-6">
         <div
           class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12"
@@ -28,7 +28,7 @@
 
     <hr />
 
-    <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0 text-imdb_white  ">
+    <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0 text-black  ">
       <div class="container xl:max-w-6xl mx-auto px-4">
         <header class="text-center mx-auto mb-12 lg:px-20">
           <h2 class="text-2xl leading-normal mb-2 font-bold">
@@ -119,7 +119,7 @@
 
     <hr />
 
-    <div class="py-16 text-imdb_white text-center">
+    <div class="py-16 text-black text-center">
       <div class="container m-auto px-6 md:px-12 xl:px-6">
         <div
           class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center content-center justify-items-center place-content-center"

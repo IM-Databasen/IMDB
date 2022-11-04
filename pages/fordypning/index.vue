@@ -39,8 +39,7 @@
       <article
         v-for="item in filteredTemaer"
         :key="item.id"
-        class="shadow text-imdb_gray-900 rounded-2xl p-5 mx-2"
-        :class="['bg-imdb_green_500', 'bg-imdb_olive_500', 'bg-imdb_text_tertiary'][Math.floor(Math.random() * ['bg-imdb_text_tertiary', 'bg-imdb_green_500', 'bg-imdb_olive_500'].length)]"
+        class="shadow text-black rounded-2xl p-5 mx-2 bg-gray-300" 
       >
         <h1 class="font-bold">
           {{ item.title[0] }}

@@ -9,7 +9,7 @@
             role="presentation"
           ></span>
           <span
-            class="flex-none block mx-4 px-4 py-2.5 text-xs leading-none font-medium uppercase bg-black text-white"
+            class="flex-none block mx-4 px-4 py-2.5 text-xs leading-none font-medium uppercase text-black"
           >
             {{ company.name }}
           </span>

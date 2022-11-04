@@ -1,9 +1,9 @@
 <template>
-  <div class="text-imdb_white">
+  <div class="text-black">
     <form class="mb-3">
       <label
         for="default-search"
-        class="mb-2 text-sm font-medium text-imdb_gray-700 sr-only dark:text-imdb_white"
+        class="mb-2 text-sm font-medium text-black sr-only bg-white"
         >Search</label
       >
       <div class="relative">
@@ -12,7 +12,7 @@
         >
           <svg
             aria-hidden="true"
-            class="w-5 h-5 text-gray-500 dark:text-gray-400"
+            class="w-5 h-5 text-gray-500"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

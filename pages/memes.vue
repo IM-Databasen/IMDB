@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="w-full max-w-5xl p-5 pb-10 mx-auto mb-10 gap-5 columns-3 space-y-5 text-imdb_white"
+      class="w-full max-w-5xl p-5 pb-10 mx-auto mb-10 gap-5 columns-3 space-y-5 text-black"
     >
       <nuxt-img
         preload
