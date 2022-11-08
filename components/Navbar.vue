@@ -26,7 +26,7 @@
         "
         class="py-2 px-3 m-1 text-sm font-medium border-t-2"
       >
-        Him
+        Him <i class="fas fa-home"></i>
       </nuxt-link>
       <nuxt-link
         to="/about"

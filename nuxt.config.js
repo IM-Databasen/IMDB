@@ -19,7 +19,14 @@ module.exports = {
         content: "A website for AKS students",
       },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/faviconV1.ico" }],
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/faviconV1.ico" },
+      {
+        href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+        rel: "stylesheet",
+      },
+    ],
+    // script: [{ src: "https://kit.fontawesome.com/0cda3bb6df.js" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -29,7 +36,7 @@ module.exports = {
   plugins: [
     // { src: "~/plugins/socket.client.js" }
     { src: "~/plugins/notifier.js" },
-    { src: "~/plugins/modal.js" }
+    { src: "~/plugins/modal.js" },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -40,12 +47,12 @@ module.exports = {
     // https://go.nuxtjs.dev/typescript
     "@nuxt/typescript-build",
   ],
-  
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    "@nuxtjs/tailwindcss", 
-    "@nuxt/http", 
-    "@nuxt/content", 
+    "@nuxtjs/tailwindcss",
+    "@nuxt/http",
+    "@nuxt/content",
     "@nuxt/image",
     // "~/io" // socket io
   ],
@@ -57,8 +64,6 @@ module.exports = {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   // buildDir: "dist",
-
-
   generate: {
     fallback: true,
   },
@@ -82,4 +87,5 @@ module.exports = {
       avatar: { modifiers: { format: "webp", width: 600, height: 600 } },
     },
   },
+  pageTransition: "page",
 };
