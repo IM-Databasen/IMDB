@@ -3,7 +3,7 @@
     <label
       for="default-search"
       class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
-      >Search</label
+      >Search {{ value }}</label
     >
     <div class="relative">
       <div
@@ -27,6 +27,7 @@
       </div>
       <input
         type="search"
+        @input="handleInput"
         v-model="search"
         id="default-search"
         class="block p-4 pl-10 w-full text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -39,33 +40,17 @@
 <script>
 export default {
   props: {
-    content: {
-      type: Array,
-      default: () => [],
-    },
-    searchProp: {
-      type: String,
-      default: "name",
-    },
+    value: String,
   },
   data() {
     return {
-      search: "",
+      search: this.value,
     };
   },
-  computed: {
-    // filter() {
-    //   console.log("cot");
-    //   this.$emit(
-    //     "filter",
-    //     this.content.filter((item) =>
-    //       item[this.searchProp]
-    //         .toLowerCase()
-    //         .includes(this.search.toLowerCase())
-    //     )
-    //   );
-    //   return [];
-    // },
+  methods: {
+    async handleInput(e) {
+      this.$emit("input", this.search);
+    },
   },
 };
 </script>
