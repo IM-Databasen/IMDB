@@ -1,39 +1,109 @@
 <template>
-  <nav class="flex flex-row items-center justify-between p-5 h-fit sm:h-20 border-b-2 df">
-    <div class="flex flex-col items-center text-black text-4xl font-extralight sm:flex-row">
-      <nuxt-img src="/faviconV2.png" preload format="webp" alt="IMDB Logo" width="256px" height="256px" class="w-16 ml-5" />
-      <h1 class="pl-5 sm:pl-0 text-black">
-        IMDB
-      </h1>
+  <nav
+    class="flex flex-row items-center justify-between p-5 h-fit sm:h-20 border-b-2 df"
+  >
+    <div
+      class="flex flex-col items-center text-black text-4xl font-extralight sm:flex-row"
+    >
+      <nuxt-img
+        src="/faviconV2.png"
+        preload
+        format="webp"
+        alt="IMDB Logo"
+        width="256px"
+        height="256px"
+        class="w-16 ml-5"
+      />
+      <h1 class="pl-5 sm:pl-0 text-black">IMDB</h1>
     </div>
     <div class="flex flex-col sm:flex-row sm:ml-6 border-b-2 border-gray-900">
-      <nuxt-link to="/" :class="String($nuxt.$route.path) == '/' ? 'border-gray-900 text-gray-900' : 'border-transparent text-gray-600 hover:text-gray-800'"
-        class="py-2 px-3 m-1 text-sm font-medium border-t-2">
+      <nuxt-link
+        to="/"
+        :class="
+          String($nuxt.$route.path) == '/'
+            ? 'border-gray-900 text-gray-900'
+            : 'border-transparent text-gray-600 hover:text-gray-800'
+        "
+        class="py-2 px-3 m-1 text-sm font-medium border-t-2"
+      >
         Him
       </nuxt-link>
-      <nuxt-link to="/about" :class="String($nuxt.$route.path) == '/about' ? 'border-gray-900 text-gray-900' : 'border-transparent text-gray-600 hover:text-gray-800'"
-        class="py-2 px-3 m-1 text-sm font-medium border-t-2">
+      <nuxt-link
+        to="/about"
+        :class="
+          String($nuxt.$route.path) == '/about'
+            ? 'border-gray-900 text-gray-900'
+            : 'border-transparent text-gray-600 hover:text-gray-800'
+        "
+        class="py-2 px-3 m-1 text-sm font-medium border-t-2"
+      >
         Ka e IMDB?
       </nuxt-link>
-      <nuxt-link to="/tests" :class="String($nuxt.$route.path).startsWith('/tests') ? 'border-gray-900 text-gray-900' : 'border-transparent text-gray-600 hover:text-gray-800'"
-        class="py-2 px-3 m-1 text-sm font-medium border-t-2">
+      <nuxt-link
+        to="/tests"
+        :class="
+          String($nuxt.$route.path).startsWith('/tests')
+            ? 'border-gray-900 text-gray-900'
+            : 'border-transparent text-gray-600 hover:text-gray-800'
+        "
+        class="py-2 px-3 m-1 text-sm font-medium border-t-2"
+      >
         Prøvar
       </nuxt-link>
-      <nuxt-link to="/memes" :class="String($nuxt.$route.path).startsWith('/memes') ? 'border-gray-900 text-gray-900' : 'border-transparent text-gray-600 hover:text-gray-800'"
-        class="py-2 px-3 m-1 text-sm font-medium border-t-2">
+      <nuxt-link
+        to="/memes"
+        :class="
+          String($nuxt.$route.path).startsWith('/memes')
+            ? 'border-gray-900 text-gray-900'
+            : 'border-transparent text-gray-600 hover:text-gray-800'
+        "
+        class="py-2 px-3 m-1 text-sm font-medium border-t-2"
+      >
         Memes
       </nuxt-link>
-      <nuxt-link to="/chat" :class="String($nuxt.$route.path).startsWith('/chat') ? 'border-gray-900 text-gray-900' : 'border-transparent text-gray-600 hover:text-gray-800'"
-        class="py-2 px-3 m-1 text-sm font-medium border-t-2">
+      <nuxt-link
+        to="/chat"
+        :class="
+          String($nuxt.$route.path).startsWith('/chat')
+            ? 'border-gray-900 text-gray-900'
+            : 'border-transparent text-gray-600 hover:text-gray-800'
+        "
+        class="py-2 px-3 m-1 text-sm font-medium border-t-2"
+      >
         Chat
       </nuxt-link>
-      <nuxt-link to="/fordypning" :class="String($nuxt.$route.path).startsWith('/fordypning') ? 'border-gray-900 text-gray-900' : 'border-transparent text-gray-600 hover:text-gray-800'"
-        class="py-2 px-3 m-1 text-sm font-medium border-t-2">
+      <nuxt-link
+        to="/fordypning"
+        :class="
+          String($nuxt.$route.path).startsWith('/fordypning')
+            ? 'border-gray-900 text-gray-900'
+            : 'border-transparent text-gray-600 hover:text-gray-800'
+        "
+        class="py-2 px-3 m-1 text-sm font-medium border-t-2"
+      >
         Fordypning
       </nuxt-link>
-      <nuxt-link to="/bedrift" :class="String($nuxt.$route.path).startsWith('/bedrift') ? 'border-gray-900 text-gray-900' : 'border-transparent text-gray-600 hover:text-gray-800'"
-        class="py-2 px-3 m-1 text-sm font-medium border-t-2">
+      <nuxt-link
+        to="/bedrift"
+        :class="
+          String($nuxt.$route.path).startsWith('/bedrift')
+            ? 'border-gray-900 text-gray-900'
+            : 'border-transparent text-gray-600 hover:text-gray-800'
+        "
+        class="py-2 px-3 m-1 text-sm font-medium border-t-2"
+      >
         Bedriftar
+      </nuxt-link>
+      <nuxt-link
+        to="/laererdb"
+        :class="
+          String($nuxt.$route.path).startsWith('/laererdb')
+            ? 'border-gray-900 text-gray-900'
+            : 'border-transparent text-gray-600 hover:text-gray-800'
+        "
+        class="py-2 px-3 m-1 text-sm font-medium border-t-2"
+      >
+        Lærere
       </nuxt-link>
     </div>
   </nav>
@@ -151,7 +221,6 @@ export default {
   },
 };
 </script>
-
 
 <style scoped>
 .df {

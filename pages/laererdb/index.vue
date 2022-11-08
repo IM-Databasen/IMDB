@@ -35,6 +35,10 @@
         />
       </div>
     </form>
+    <!-- <Searchbar
+      :content="this.cards"
+      searchProp="name"
+    /> -->
     <div class="grid grid-rows-1 md:grid-cols-3">
       <article
         v-for="item in filteredCards"
@@ -42,17 +46,17 @@
         class="bg-imdb_gray-700 shadow text-white rounded-2xl p-5 mx-2"
       >
         <h1 class="font-bold">
-          {{ item.title }}
+          {{ item.name }}
         </h1>
         <p class="font-light">
-          {{ item.description }}
+          {{ item.name }}
         </p>
         <h2 class="text-sm mb-5">Publisert: {{ item.createdAt }}</h2>
         <nuxt-link
-          :to="'/tests/' + item.slug"
+          :to="'/laererdb/' + item.slug"
           class="rounded py-2 px-4 text-center text-white hover:bg-gray-300"
         >
-          Vis Prøve
+          Vis Lærer
         </nuxt-link>
       </article>
     </div>
@@ -60,9 +64,10 @@
 </template>
 
 <script>
+import Searchbar from "~/components/Searchbar.vue";
 export default {
   head: {
-    title: "IMDB - Prøver",
+    title: "IMDB - Lærere",
     meta: [
       {
         hid: "description",
@@ -77,14 +82,14 @@ export default {
     };
   },
   async asyncData({ $content, $http }) {
-    const cards = await $content("tests").fetch();
+    const cards = await $content("laerere").fetch();
 
     return { cards };
   },
   computed: {
     filteredCards() {
-      return this.cards.filter((post) =>
-        post.title.toLowerCase().includes(this.search.toLowerCase())
+      return this.cards.filter((laerer) =>
+        laerer.name.toLowerCase().includes(this.search.toLowerCase())
       );
     },
   },
