@@ -19,14 +19,7 @@ module.exports = {
         content: "A website for AKS students",
       },
     ],
-    link: [
-      { rel: "icon", type: "image/x-icon", href: "/faviconV1.ico" },
-      {
-        href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
-        rel: "stylesheet",
-      },
-    ],
-    // script: [{ src: "https://kit.fontawesome.com/0cda3bb6df.js" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/faviconV1.ico" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
