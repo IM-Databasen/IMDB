@@ -1,4 +1,4 @@
-# nettside
+# IMDB 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a63d0ace-9c8a-40a6-9b78-83bbf27ac91c/deploy-status)](https://app.netlify.com/sites/im-databasen/deploys)
 
