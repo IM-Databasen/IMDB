@@ -90,15 +90,11 @@
 <script>
 import Searchbar from "~/components/Searchbar.vue";
 export default {
-  head: {
-    title: "IMDB - Bedrifer",
-    meta: [
-      {
-        hid: "description",
-        name: "description",
-        content: "Bedrifter page",
-      },
-    ],
+  name: "Bedrifter",
+  head() {
+    return {
+      title: "IMDB - Bedrifter",
+    };
   },
   data() {
     return {
@@ -126,6 +122,7 @@ export default {
   },
   computed: {
     filteredCompanies() {
+      console.log();
       return this.companies.filter(
         (company) =>
           company.name.toLowerCase().includes(this.search.toLowerCase()) &&

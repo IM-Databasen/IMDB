@@ -28,15 +28,17 @@
 <script>
 import Searchbar from "~/components/Searchbar.vue";
 export default {
-  head: {
-    title: "IMDB - Lærere",
-    meta: [
-      {
-        hid: "description",
-        name: "description",
-        content: "Tests page",
-      },
-    ],
+  head() {
+    return {
+      title: "IMDB - Lærere",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Tests page",
+        },
+      ],
+    };
   },
   data() {
     return {

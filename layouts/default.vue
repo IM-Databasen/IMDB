@@ -3,11 +3,13 @@
     <Navbar />
     <Snackbar />
     <Modal />
-    <Nuxt class="overflow-hidden py-10 px-5 sm:px-10 lg:px-36 2xl:px-48 bg-white " />
+    <Nuxt
+      class="overflow-hidden py-10 px-5 sm:px-10 lg:px-36 2xl:px-48 bg-white"
+    />
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Navbar from "~/components/Navbar.vue";
 import Snackbar from "~/components/Snackbar.vue";
 import Modal from "~/components/Modal.vue";
@@ -18,7 +20,7 @@ export default {
     Snackbar,
     Modal,
   },
-}
+};
 </script>
 <style lang="scss">
 $c-gray-900: #000000;
@@ -39,8 +41,8 @@ $c-white: $c-gray-100;
 $c-text-primary: $c-gray-100;
 $c-text-secondary: $c-gray-200;
 $c-text-tertiary: $c-gray-500;
-body, html {
+body,
+html {
   background-color: #fff;
 }
-
 </style>

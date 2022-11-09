@@ -83,7 +83,7 @@ export default {
     selected: Array,
     categories: {
       type: Array,
-      default: [],
+      default: () => [],
     },
   },
   data() {
