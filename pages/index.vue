@@ -33,6 +33,7 @@
 <script>
 import Suggestions from "~/components/Suggestions.vue";
 import InfiniteScroll from "~/components/InfiniteScroll.vue";
+
 export default {
   head: {
     title: "IMDB - Home",
