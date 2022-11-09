@@ -1,20 +1,21 @@
 <template>
   <div>
-    <div
-      class="w-full max-w-5xl p-5 pb-10 mx-auto mb-10 gap-5 columns-3 space-y-5 text-black"
-    >
-      <nuxt-img
-        preload
-        v-for="meme in memes"
-        :key="meme.pathShort"
-        :src="meme.pathLong"
-        :alt="meme.name"
-      />
+    <Searchbar v-model="search" />
+    <div class="grid grid-rows-1 gap-2 md:grid-cols-3">
+      <Card v-for="meme in filteredMemes" class="p-5" :key="meme.pathShort">
+        <div
+          class="w-full max-w-5xl p-5 pb-10 mx-auto mb-10 gap-5 columns-3 space-y-5 text-black"
+        >
+          <nuxt-img preload :src="meme.pathLong" :alt="meme.name" />
+        </div>
+      </Card>
     </div>
   </div>
 </template>
 
 <script>
+import Searchbar from "~/components/Searchbar.vue";
+import Card from "~/components/Card.vue";
 export default {
   head: {
     title: "IMDB - Memes",
@@ -29,6 +30,7 @@ export default {
   data() {
     return {
       memes: [],
+      search: "",
     };
   },
   mounted() {
@@ -53,6 +55,17 @@ export default {
         })
       );
     },
+  },
+  computed: {
+    filteredMemes() {
+      return this.memes.filter((meme) =>
+        meme.name.toLowerCase().includes(this.search.toLowerCase())
+      );
+    },
+  },
+  components: {
+    Searchbar,
+    Card,
   },
 };
 </script>
