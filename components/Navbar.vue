@@ -18,13 +18,30 @@
     </div>
     <div class="flex flex-col sm:flex-row sm:ml-6 border-b-2 border-gray-900">
       <nuxt-link
+        v-for="(link, i) in routes"
+        :key="i"
+        :to="link.route"
+        :class="
+          // create a regex to exactly match the current route
+          // and add the active class if it matches
+          new RegExp(`^${link.route}$`, 'i').test($route.path)
+            ? 'border-gray-900 text-gray-900'
+            : 'border-transparent text-gray-600 hover:text-gray-800'
+        "
+        class="py-2 px-3 m-1 text-sm font-medium border-t-2 flex flex-row outline-none"
+      >
+        {{ link.name }}
+        <Icon v-if="link.icon" :name="link.icon" class="w-6 h-6 ml-2" />
+      </nuxt-link>
+
+      <!-- <nuxt-link
         to="/"
         :class="
           String($nuxt.$route.path) == '/'
             ? 'border-gray-900 text-gray-900'
             : 'border-transparent text-gray-600 hover:text-gray-800'
         "
-        class="py-2 px-3 m-1 text-sm font-medium border-t-2 flex flex-row outline-0 outline-none"
+        class="py-2 px-3 m-1 text-sm font-medium border-t-2 flex flex-row outline-none"
       >
         Him
         <Icon name="home" class="w-6 h-6 ml-1" />
@@ -36,7 +53,7 @@
             ? 'border-gray-900 text-gray-900'
             : 'border-transparent text-gray-600 hover:text-gray-800'
         "
-        class="py-2 px-3 m-1 text-sm font-medium border-t-2 flex flex-row"
+        class="py-2 px-3 m-1 text-sm font-medium border-t-2 flex flex-row outline-none"
       >
         Ka e IMDB?
         <Icon name="server" class="w-6 h-6 ml-1" />
@@ -48,7 +65,7 @@
             ? 'border-gray-900 text-gray-900'
             : 'border-transparent text-gray-600 hover:text-gray-800'
         "
-        class="py-2 px-3 m-1 text-sm font-medium border-t-2 flex flex-row"
+        class="py-2 px-3 m-1 text-sm font-medium border-t-2 flex flex-row outline-none"
       >
         Prøvar
         <Icon name="folder" class="w-6 h-6 ml-1" />
@@ -60,7 +77,7 @@
             ? 'border-gray-900 text-gray-900'
             : 'border-transparent text-gray-600 hover:text-gray-800'
         "
-        class="py-2 px-3 m-1 text-sm font-medium border-t-2 flex flex-row"
+        class="py-2 px-3 m-1 text-sm font-medium border-t-2 flex flex-row outline-none"
       >
         Memes
         <Icon name="image" class="w-6 h-6 ml-1" />
@@ -72,7 +89,7 @@
             ? 'border-gray-900 text-gray-900'
             : 'border-transparent text-gray-600 hover:text-gray-800'
         "
-        class="py-2 px-3 m-1 text-sm font-medium border-t-2 flex flex-row"
+        class="py-2 px-3 m-1 text-sm font-medium border-t-2 flex flex-row outline-none"
       >
         Chat
         <Icon name="chat" class="w-6 h-6 ml-1" />
@@ -84,7 +101,7 @@
             ? 'border-gray-900 text-gray-900'
             : 'border-transparent text-gray-600 hover:text-gray-800'
         "
-        class="py-2 px-3 m-1 text-sm font-medium border-t-2 flex flex-row"
+        class="py-2 px-3 m-1 text-sm font-medium border-t-2 flex flex-row outline-none"
       >
         Fordypning
         <Icon name="screen" class="w-6 h-6 ml-1" />
@@ -96,7 +113,7 @@
             ? 'border-gray-900 text-gray-900'
             : 'border-transparent text-gray-600 hover:text-gray-800'
         "
-        class="py-2 px-3 m-1 text-sm font-medium border-t-2 flex flex-row"
+        class="py-2 px-3 m-1 text-sm font-medium border-t-2 flex flex-row outline-none"
       >
         Bedriftar
         <Icon name="chart" class="w-6 h-6 ml-1" />
@@ -108,11 +125,11 @@
             ? 'border-gray-900 text-gray-900'
             : 'border-transparent text-gray-600 hover:text-gray-800'
         "
-        class="py-2 px-3 m-1 text-sm font-medium border-t-2 flex flex-row"
+        class="py-2 px-3 m-1 text-sm font-medium border-t-2 flex flex-row outline-none"
       >
         Lærere
         <Icon name="users-group" class="w-6 h-6 ml-1" />
-      </nuxt-link>
+      </nuxt-link> -->
     </div>
   </nav>
 </template>
@@ -122,6 +139,52 @@ import Icon from "./Icon.vue";
 export default {
   template: "navbar",
   transition: "slide-bottom",
+  data() {
+    return {
+      routes: [
+        {
+          name: "Him",
+          route: "/",
+          icon: "home",
+        },
+        {
+          name: "Ka e IMDB?",
+          route: "/about",
+          icon: "server",
+        },
+        {
+          name: "Prøvar",
+          route: "/tests",
+          icon: "folder",
+        },
+        {
+          name: "Memes",
+          route: "/memes",
+          icon: "image",
+        },
+        {
+          name: "Chat",
+          route: "/chat",
+          icon: "chat",
+        },
+        {
+          name: "Fordypning",
+          route: "/fordypning",
+          icon: "screen",
+        },
+        {
+          name: "Bedriftar",
+          route: "/bedrift",
+          icon: "chart",
+        },
+        {
+          name: "Lærere",
+          route: "/laererdb",
+          icon: "users-group",
+        },
+      ],
+    };
+  },
   async asyncData({ params, route }) {
     return {
       params: params,
