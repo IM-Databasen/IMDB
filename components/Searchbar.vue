@@ -12,15 +12,14 @@
         type="button"
         class="flex absolute left-0 inset-y-0 items-center pl-3"
       >
-        Filter
+        <Icon name="filter" class="w-5 h-5 text-gray-500" />
       </button>
       <input
         type="search"
         @input="handleInput"
         v-model="search"
         id="default-search"
-        class="block p-4 w-full text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-        :class="useFilter ? 'pl-16' : 'pl-10'"
+        class="block p-4 w-full text-sm text-gray-900 rounded-lg pl-10 border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
         placeholder="Søk..."
       />
       <div
