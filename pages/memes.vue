@@ -89,7 +89,7 @@ export default {
   },
   watch: {
     selected() {
-      console.log(this.selected);
+      // console.log(this.selected);
     },
   },
   components: {
