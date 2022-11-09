@@ -1,12 +1,18 @@
 <template>
   <div>
-    <Searchbar v-model="search" />
+    <Searchbar
+      v-model="search"
+      :selected="selected"
+      @selected="selected = $event"
+      :categories="categories"
+    />
     <div class="grid grid-rows-1 gap-2 md:grid-cols-3">
       <Card v-for="meme in filteredMemes" class="p-5" :key="meme.pathShort">
         <div
           class="w-full max-w-5xl p-5 pb-10 mx-auto mb-10 gap-5 columns-3 space-y-5 text-black"
         >
-          <nuxt-img preload :src="meme.pathLong" :alt="meme.name" />
+          <p>{{ meme.category }}</p>
+          <!-- <nuxt-img preload :src="meme.pathLong" :alt="meme.name" /> -->
         </div>
       </Card>
     </div>
@@ -31,6 +37,13 @@ export default {
     return {
       memes: [],
       search: "",
+      categories: [
+        {
+          id: 0,
+          name: "Alle",
+        },
+      ],
+      selected: [],
     };
   },
   mounted() {
@@ -44,23 +57,40 @@ export default {
     //   link: "https://github.com/ArvidWedtstein/Github-Embed-Generator",
     // });
   },
+  computed: {
+    filteredMemes() {
+      console.log(this.memes);
+      return this.memes.filter((meme) =>
+        meme.name.toLowerCase().includes(this.search.toLowerCase())
+      );
+    },
+  },
   methods: {
+    getCategory(path) {
+      let cat = String(path.replace(/\/[^/]*$/, "")).replace(/(\.\/|\.)/g, "");
+      if (this.categories.find((cat) => cat.name === cat) || cat === "") {
+        return;
+      }
+      this.categories.push({
+        id: this.categories.length,
+        name: cat,
+      });
+      return cat;
+    },
     importAll(r) {
-      // create a global regex pattern that replace ./ and jpg, jpeg, png and webp
       r.keys().forEach((key) =>
         this.memes.push({
           name: key.replaceAll(/\.(\/|jpg|jpeg|png|webp|gif)/g, ""),
-          pathLong: r(key),
           pathShort: key,
+          category: this.getCategory(key),
+          pathLong: r(key),
         })
       );
     },
   },
-  computed: {
-    filteredMemes() {
-      return this.memes.filter((meme) =>
-        meme.name.toLowerCase().includes(this.search.toLowerCase())
-      );
+  watch: {
+    selected() {
+      console.log(this.selected);
     },
   },
   components: {
