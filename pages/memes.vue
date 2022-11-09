@@ -7,7 +7,7 @@
       :categories="categories"
     />
     <div class="grid grid-rows-1 gap-2 md:grid-cols-3">
-      <Card v-for="meme in filteredMemes" class="p-5" :key="meme.pathShort">
+      <Card v-for="meme in filteredMemes" class="p-5" :key="meme.pathLong">
         <div
           class="w-full max-w-5xl p-5 pb-10 mx-auto mb-10 gap-5 columns-3 space-y-5 text-black"
         >

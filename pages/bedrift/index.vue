@@ -1,40 +1,11 @@
 <template>
   <div class="text-black">
-    <form class="mb-3">
-      <label
-        for="default-search"
-        class="mb-2 text-sm font-medium text-black sr-only bg-white"
-        >Search</label
-      >
-      <div class="relative">
-        <div
-          class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
-        >
-          <svg
-            aria-hidden="true"
-            class="w-5 h-5 text-gray-500"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            ></path>
-          </svg>
-        </div>
-        <input
-          type="search"
-          v-model="search"
-          id="default-search"
-          class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="Søk bedrift..."
-        />
-      </div>
-    </form>
+    <Searchbar
+      v-model="search"
+      :selected="selected"
+      @selected="selected = $event"
+      :categories="categories"
+    />
     <div class="grid grid-cols-2">
       <div
         v-for="(company, index) in filteredCompanies"
@@ -56,11 +27,17 @@
             <li class="inline-block before:mr-2.5">
               Tar lærlinger: {{ company.apprenticeCompany ? "Ja" : "Nei" }}
             </li>
-            <li v-if="company.technologies.length > 0" class="inline-block before:mr-2.5">
+            <li
+              v-if="company.technologies.length > 0"
+              class="inline-block before:mr-2.5"
+            >
               <ul class="inline-block">
                 <li class="text-sm font-bold">Teknologier:</li>
                 <li
-                  v-for="(technology, tindex) in company.technologies.slice(0,5)"
+                  v-for="(technology, tindex) in company.technologies.slice(
+                    0,
+                    5
+                  )"
                   :key="tindex"
                   class="mr-0.5"
                 >
@@ -73,8 +50,15 @@
         <div
           class="relative bg-imdb_white p-4 z-10 lg:basis-3/5 lg:before:-skew-x-3 lg:before:bg-imdb_white lg:before:w-7 lg:before:absolute lg:before:-left-2.5 lg:before:z-10 group-[.alt]:before:-right-2.5 before:group-[.alt]:left-[inherit] before:group-[.alt]:skew-x-3"
         >
-          <a :href="company.website" target="_blank" class="leading-none m-0 text-2xl text-imdb_gray-900">{{ company.name }}</a>
-          <h2 class="text-base font-light uppercase mt-1.5 text-imdb_text_tertiary">
+          <a
+            :href="company.website"
+            target="_blank"
+            class="leading-none m-0 text-2xl text-imdb_gray-900"
+            >{{ company.name }}</a
+          >
+          <h2
+            class="text-base font-light uppercase mt-1.5 text-imdb_text_tertiary"
+          >
             {{ company.slogan || ":-)" }}
           </h2>
           <div class="relative flex flex-row mt-2">
@@ -104,6 +88,7 @@
 </template>
 
 <script>
+import Searchbar from "~/components/Searchbar.vue";
 export default {
   head: {
     title: "IMDB - Bedrifer",
@@ -118,18 +103,39 @@ export default {
   data() {
     return {
       search: "",
+      selected: [],
+      categories: [],
     };
   },
   async asyncData({ $content, $http }) {
     const companies = await $content("bedrifter").fetch();
-    return { companies: companies.companies };
+
+    return {
+      companies: companies.companies,
+      categories: [
+        {
+          id: 0,
+          name: "IT-Utvikling",
+        },
+        {
+          id: 1,
+          name: "IT-Drift",
+        },
+      ],
+    };
   },
   computed: {
     filteredCompanies() {
-      return this.companies.filter((company) =>
-        company.name.toLowerCase().includes(this.search.toLowerCase())
+      return this.companies.filter(
+        (company) =>
+          company.name.toLowerCase().includes(this.search.toLowerCase()) &&
+          (this.selected.length === 0 ||
+            this.selected.find((cat) => company.type.includes(cat.name)))
       );
     },
+  },
+  components: {
+    Searchbar,
   },
 };
 </script>
