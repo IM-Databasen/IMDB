@@ -12,7 +12,7 @@
           class="w-full max-w-5xl p-5 pb-10 mx-auto mb-10 gap-5 columns-3 space-y-5 text-black"
         >
           <!-- <p>{{ meme.category }}</p> -->
-          <nuxt-img preload :src="meme.pathLong" :alt="meme.name" />
+          <nuxt-img :src="meme.pathShort" :alt="meme.name" />
         </div>
       </Card>
     </div>
