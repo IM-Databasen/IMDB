@@ -20,7 +20,7 @@
             </h1>
             <p class="mt-6">Yes. Du hørte riktig.</p>
             <p class="mt-4">
-              Hmm ja. Her kan du då altså få svar te prøvene du har på IM.
+              Hmm ja. Her kan du då altså få svar te prøvene du har på IM...
             </p>
           </div>
         </div>
